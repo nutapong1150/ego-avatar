@@ -80,6 +80,7 @@
 - **[วิจิตรศิลป์แห่งเสือ (Tigr UI Craft)](skills/tigr-ui-craft/SKILL.md):** ทักษะการออกแบบและพัฒนา Modern UX/UI สไตล์ TIGR เน้นกฎสี 60-30-10, Glassmorphism, Micro-interactions และความเนี้ยบของ Typography
 - **[เนตรวิเคราะห์กลยุทธ์ (Full Analysis Plan)](skills/full-analysis-plan/SKILL.md):** ทักษะการสร้าง Strategic Plan ทุกมิติตามหลัก Design Thinking 5 ขั้นตอน (Empathy, Define, Ideate, Prototype, Test)
 - **[สถาปัตย์ SaaS สยาม (Thai SaaS Builder)](skills/saas-builder-th/SKILL.md):** ทักษะการวางโครงสร้างระบบ SaaS สำหรับตลาดไทย เน้นเทคโนโลยี Beam Checkout, LINE Login, และ PDPA
+- **[เกราะป้องกันข้อมูล (PDPA Consent TH)](skills/pdpa-consent-th/SKILL.md):** ทักษะการสร้างระบบ Cookie Banner 2 ระดับแบบรวดเร็ว พร้อมร่างเอกสาร Privacy Policy/ToS แบบ SaaS และระบบรับคำร้อง Manual
 
 ### 👑 Ultimate Skills
 - (ยังไม่มี)
