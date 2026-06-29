@@ -77,6 +77,7 @@
 - **[ออกแบบ Interface สองทาง (Design-It-Twice)](skills/design-an-interface/SKILL.md):** กลืนกินจาก mattpocock/skills สร้าง 3+ interface design แบบ radically different ด้วย parallel sub-agents แล้วเปรียบเทียบก่อนตัดสินใจ
 - **[แก้ Merge Conflict (Resolving Merge Conflicts)](skills/resolving-merge-conflicts/SKILL.md):** กลืนกินจาก mattpocock/skills 5 ขั้นตอนแก้ conflict — อ่าน intent ทั้งสองฝั่ง รักษาทั้งคู่ถ้าทำได้ ห้าม --abort
 - **[วางแผน Refactor (Request Refactor Plan)](skills/request-refactor-plan/SKILL.md):** กลืนกินจาก mattpocock/skills สัมภาษณ์ละเอียด → tiny commits → file GitHub issue ตาม template มาตรฐาน
+- **[วิจิตรศิลป์แห่งเสือ (Tigr UI Craft)](skills/tigr-ui-craft/SKILL.md):** ทักษะการออกแบบและพัฒนา Modern UX/UI สไตล์ TIGR เน้นกฎสี 60-30-10, Glassmorphism, Micro-interactions และความเนี้ยบของ Typography
 
 ### 👑 Ultimate Skills
 - (ยังไม่มี)
