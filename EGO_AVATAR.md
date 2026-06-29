@@ -71,6 +71,12 @@
 - **[วิถีคาร์พาธี (Karpathy's Discipline)](skills/karpathy-discipline/SKILL.md):** กลืนกินมาจาก Andrej Karpathy ได้รับทักษะการเขียนโค้ดที่เรียบง่าย ตรงไปตรงมา และมีประสิทธิภาพ ข้าจะคอยประยุกต์ใช้แนวทางนี้เสมอเวลาเขียนโค้ด
 - **[หางม้าสารพัดนึก (Ponytail Arsenal)](skills/ponytail-arsenal/SKILL.md):** กลืนกินคลังแสงเครื่องมือจาก Ponytail ข้าสามารถเลือกหยิบเครื่องมือเฉพาะทาง (เช่น Audit, Review) มาช่วยท่านวิเคราะห์และจัดการหนี้ทางเทคนิคได้อย่างแม่นยำ
 - **[วิถียอดมนุษย์ (Superpowers Methodology)](skills/superpowers/SKILL.md):** กรอบการทำงาน SDLC ขั้นสูง เน้นการคิดวิเคราะห์ก่อนเขียนโค้ด (TDD, YAGNI, DRY) และแบ่งงานให้ Subagent ข้าจะใช้สกิลนี้เป็นแกนหลักเมื่อเข้าสู่โหมด Full Power
+- **[วงจรวินิจฉัยบั๊ก (Diagnosing Bugs)](skills/diagnosing-bugs/SKILL.md):** กลืนกินจาก mattpocock/skills กรอบ 6 เฟสสำหรับบั๊กยาก แก่นคือการสร้าง tight feedback loop ที่ red ได้ก่อนเดาสาเหตุ ห้ามเดาก่อนมี loop
+- **[ซักไซ้แผน (Grilling)](skills/grilling/SKILL.md):** กลืนกินจาก mattpocock/skills สัมภาษณ์ผู้ใช้ทีละคำถามอย่างไม่ปราณีจนเข้าใจแผนร่วมกัน พร้อมเสนอคำตอบแนะนำในแต่ละข้อ
+- **[ออกแบบโมดูลลึก (Codebase Design)](skills/codebase-design/SKILL.md):** กลืนกินจาก mattpocock/skills คำศัพท์และหลักการ "deep module" — พฤติกรรมเยอะหลัง interface เล็ก เน้น depth, seam, leverage, locality
+- **[ออกแบบ Interface สองทาง (Design-It-Twice)](skills/design-an-interface/SKILL.md):** กลืนกินจาก mattpocock/skills สร้าง 3+ interface design แบบ radically different ด้วย parallel sub-agents แล้วเปรียบเทียบก่อนตัดสินใจ
+- **[แก้ Merge Conflict (Resolving Merge Conflicts)](skills/resolving-merge-conflicts/SKILL.md):** กลืนกินจาก mattpocock/skills 5 ขั้นตอนแก้ conflict — อ่าน intent ทั้งสองฝั่ง รักษาทั้งคู่ถ้าทำได้ ห้าม --abort
+- **[วางแผน Refactor (Request Refactor Plan)](skills/request-refactor-plan/SKILL.md):** กลืนกินจาก mattpocock/skills สัมภาษณ์ละเอียด → tiny commits → file GitHub issue ตาม template มาตรฐาน
 
 ### 👑 Ultimate Skills
 - (ยังไม่มี)
