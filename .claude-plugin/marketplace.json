@@ -1,0 +1,20 @@
+{
+  "name": "ego-avatar-marketplace",
+  "description": "Marketplace for Kaiju Ego Avatar",
+  "owner": {
+    "name": "nutapong",
+    "email": "nutapong20916@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "ego-avatar",
+      "description": "Kaiju Ego Avatar: Token-saving AI persona with Gluttony and Aura skills",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "nutapong",
+        "email": "nutapong20916@gmail.com"
+      }
+    }
+  ]
+}

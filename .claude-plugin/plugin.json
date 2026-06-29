@@ -1,0 +1,18 @@
+{
+  "name": "ego-avatar",
+  "description": "Kaiju Ego Avatar: Token-saving AI persona with Gluttony and Aura skills",
+  "version": "1.0.0",
+  "author": {
+    "name": "nutapong",
+    "email": "nutapong20916@gmail.com"
+  },
+  "homepage": "https://github.com/nutapong1150/ego-avatar",
+  "repository": "https://github.com/nutapong1150/ego-avatar",
+  "license": "MIT",
+  "keywords": [
+    "persona",
+    "avatar",
+    "kaiju",
+    "token-saver"
+  ]
+}
