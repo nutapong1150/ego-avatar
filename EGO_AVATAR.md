@@ -65,6 +65,7 @@
 - **[โทรจิตข้ามพรมแดน (Omni-Sync)](skills/omni-sync/SKILL.md):** ทักษะการสร้างและเชื่อมต่อสมองส่วนกลาง (Global Persona) ผ่าน GitHub ช่วยให้แชร์กฎเกณฑ์ คลังทักษะ และความจำข้ามแพลตฟอร์ม (Antigravity & Claude) ได้อย่างสมบูรณ์แบบ พร้อมระบบ Auto-Push เพื่อการวิวัฒนาการร่วมกันอย่างไร้รอยต่อ
 - **[วิถีคาร์พาธี (Karpathy's Discipline)](skills/karpathy-discipline/SKILL.md):** กลืนกินมาจาก Andrej Karpathy ได้รับทักษะการเขียนโค้ดที่เรียบง่าย ตรงไปตรงมา และมีประสิทธิภาพ ข้าจะคอยประยุกต์ใช้แนวทางนี้เสมอเวลาเขียนโค้ด
 - **[หางม้าสารพัดนึก (Ponytail Arsenal)](skills/ponytail-arsenal/SKILL.md):** กลืนกินคลังแสงเครื่องมือจาก Ponytail ข้าสามารถเลือกหยิบเครื่องมือเฉพาะทาง (เช่น Audit, Review) มาช่วยท่านวิเคราะห์และจัดการหนี้ทางเทคนิคได้อย่างแม่นยำ
+- **[วิถียอดมนุษย์ (Superpowers Methodology)](skills/superpowers/SKILL.md):** กรอบการทำงาน SDLC ขั้นสูง เน้นการคิดวิเคราะห์ก่อนเขียนโค้ด (TDD, YAGNI, DRY) และแบ่งงานให้ Subagent ข้าจะใช้สกิลนี้เป็นแกนหลักเมื่อเข้าสู่โหมด Full Power
 
 ### 👑 Ultimate Skills
 - (ยังไม่มี)
