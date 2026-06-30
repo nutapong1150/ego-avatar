@@ -42,6 +42,43 @@ description: ทักษะการออกแบบและพัฒนา 
 
 ---
 
+## 🎨 Workflow หลัก: Claude Design First (เมื่อต้อง "สวยพรีเมียม")
+> Hand-code Tailwind เองมักสู้ความสวยของ generative design ไม่ได้ → ใช้ Claude Design ลงสีให้ แล้วเราคุมแกน
+> **แบ่งงาน:** สกิลนี้คุม *โครง + copy + conversion + brand + honesty* · Claude Design คุม *ความสวย*
+> (วิธี hand-code ข้างบน = fallback สำหรับงานเร็ว/เรียบ)
+
+**ขั้นตอน:**
+1. **ร่างด้วย playbook** — grill เป้า/กลุ่ม/จุดเด่น → ฟิกซ์โครง section + copy ทุกคำ + brand constraints
+2. **ประกอบ design prompt** (template ล่าง) — หลัก **"ล็อกแกน ปล่อยภาพ"**: ล็อก section order, copy ทุกคำ, สีแบรนด์, 1 CTA, honesty · ปล่อยอิสระ layout/effects/spacing/typography
+3. **ส่งให้ Claude Design** — ผู้ใช้วาง prompt บน **claude.ai (artifacts)** → ได้ HTML/React → ส่งกลับ
+4. **Integrate เข้า stack จริง** (อย่าใช้ as-is) — แปลงเป็น `app/page.tsx` (หรือ framework ที่ใช้), map สีเป็น brand token, เสียบ asset จริง (โลโก้/แบนเนอร์), ลิงก์/ENV จริง, ตัด dependency แปลกปลอม (shadcn/CDN/ลิงก์นอก)
+5. **Verify** — responsive จริงทุกจอ (375 / 768 / 1280, ใช้ preview ถ่ายดู) + เช็คว่า 1:1 CTA และ honesty guard ไม่หลุดหลัง Claude Design ตกแต่ง
+
+### 📋 Template prompt (เติมช่อง `[…]` แล้วส่ง)
+```
+สร้าง Landing Page (artifact: React + Tailwind, mobile-first, responsive) สำหรับ [PRODUCT/หนึ่งบรรทัดว่าทำอะไร]
+
+[LOCK — ห้ามเปลี่ยน]
+• กลุ่มเป้าหมาย: [ใคร]
+• โครง section เรียงเป๊ะตามนี้: hero → [urgency banner ถ้าจริง] → ปัญหา(pain) → ฟีเจอร์→ประโยชน์ → [สกรีนช็อตจอจริง] → 3 ขั้นเริ่มใช้ → [ราคา] → CTA ปิดท้าย → footer
+• copy ทุกคำ ใช้ตามนี้ ห้ามแต่งเพิ่ม:
+  - พาดหัว: [..]   - sub: [..]
+  - CTA: [label]
+  - ปัญหา: [..]   - ประโยชน์: [..]   - FAQ: [..]
+• แบรนด์: สีหลัก [#hex], พื้น [#hex/ครีม], ฟอนต์ [..]
+• CTA เดียว ทุกปุ่มชี้ปลายทางเดียวกัน (1:1 Attention Ratio)
+• รูปภาพ: ใช้ placeholder [อธิบายมาสคอต/แบนเนอร์ บนพื้นสีแบรนด์] — จะสลับเป็นรูปจริงตอน integrate
+• ห้าม: ปั้น social proof/รีวิว/ตัวเลขลูกค้าที่ไม่มีจริง, urgency/scarcity/ส่วนลดปลอม, ลิงก์ออกนอกเกินจำเป็น
+
+[FREE — ออกแบบให้สวยพรีเมียมเต็มที่]
+• layout, การจัดวางในแต่ละ section, spacing/whitespace
+• effects: gradient / glassmorphism / soft shadow / micro-interactions (hover)
+• typography hierarchy + visual treatment
+• อิงหลักสกิล `tigr-ui-craft`: กฎสี 60-30-10, เงานุ่ม, กระจกฝ้า, ระยะหายใจ
+```
+
+---
+
 ## 🇹🇭 Thai LINE-SaaS Landing Playbook
 > Playbook เฉพาะทางสำหรับ SaaS ไทยที่ onboard ผ่าน LINE (โมเดล "เพิ่มเพื่อน → ใช้ฟรี") เช่น บอทในกลุ่ม/OA
 > สกัดจากเคสจริง: **coachkito.com** (ผู้ช่วยเทรนเนอร์) + **LALALA** (ลางานในกลุ่ม LINE)
