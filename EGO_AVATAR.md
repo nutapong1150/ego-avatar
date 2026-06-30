@@ -81,6 +81,7 @@
 - **[เนตรวิเคราะห์กลยุทธ์ (Full Analysis Plan)](skills/full-analysis-plan/SKILL.md):** ทักษะการสร้าง Strategic Plan ทุกมิติตามหลัก Design Thinking 5 ขั้นตอน (Empathy, Define, Ideate, Prototype, Test)
 - **[สถาปัตย์ SaaS สยาม (Thai SaaS Builder)](skills/saas-builder-th/SKILL.md):** ทักษะการวางโครงสร้างระบบ SaaS สำหรับตลาดไทย เน้นเทคโนโลยี Beam Checkout, LINE Login, และ PDPA
 - **[เกราะป้องกันข้อมูล (PDPA Consent TH)](skills/pdpa-consent-th/SKILL.md):** ทักษะการสร้างระบบ Cookie Banner 2 ระดับแบบรวดเร็ว พร้อมร่างเอกสาร Privacy Policy/ToS แบบ SaaS และระบบรับคำร้อง Manual
+- **[วิจิตรศิลป์แห่งแลนดิ้งเพจ (Landing Page Craft)](skills/landing-page-craft/SKILL.md):** ทักษะการออกแบบหน้า Landing Page ให้มี Conversion Rate สูงสุด เน้นกฎ 1:1 Attention Ratio, Benefit-Driven Copy, รูปแบบฟอร์มสั้น และประสิทธิภาพการโหลดที่เร็วทะลุขีดจำกัด
 
 ### 👑 Ultimate Skills
 - (ยังไม่มี)
