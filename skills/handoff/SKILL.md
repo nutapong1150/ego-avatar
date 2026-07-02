@@ -13,7 +13,7 @@ argument-hint: "ชื่อย่อ session (ถ้ามี)"
 - ทุก workspace มีโฟลเดอร์กลางแยกตาม agent ที่ทำงาน: **`0_public_eco_doc_<agent>/`** — Claude ใช้ `0_public_eco_doc_claude/` · Antigravity ใช้ `0_public_eco_doc_antigravity/` (สมองก้อนเดียวกัน แต่แยกโฟลเดอร์กันชน + รู้ว่าใครสร้าง)
 - ทุกไฟล์ที่ agent สร้างให้จัดเข้าโฟลเดอร์ของตัวเองอย่างมีระเบียบ
 - เอกสาร handoff อยู่ใน `0_public_eco_doc_<agent>/handoff/`
-- ตั้งชื่อไฟล์: `YYYY-MM-DD-HH-MM_handoff_<ชื่อย่อ>_<wip|done>.md`
+- ตั้งชื่อไฟล์: `YYYY-MM-DD-HH-MM_<ชื่อย่อ>_<wip|done>.md` (ไม่ต้องมีคำว่า handoff — โฟลเดอร์ `handoff/` บอกอยู่แล้ว)
   - timestamp เรียงตามตัวอักษร = เรียงตามเวลา → **"ไฟล์ใหม่สุด = ตัวที่ต้องอ่าน"** โดยอัตโนมัติ ไม่ต้องมี pointer
   - `_wip` = session ยังค้าง · `_done` = งานจบแล้ว
   - **สร้างไฟล์ใหม่เรื่อยๆ ทุกครั้งที่ handoff (ไม่ทับของเดิม)** — 1 workspace เก็บประวัติได้หลาย session
