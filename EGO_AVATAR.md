@@ -99,7 +99,8 @@
 - **[คัดกรองปัญหา (Triage)](skills/triage/SKILL.md):** กลืนกินจาก mattpocock/skills จัดการ Issue และ PR จากภายนอกผ่านกระบวนการจัดประเภท ตรวจสอบ และเขียนบรีฟ
 
 ### 👑 Ultimate Skills
-- (ยังไม่มี)
+- **[สถาปนิกไร้พ่าย (Absolute Architect)](skills/absolute-architect/SKILL.md):** ร่างวิวัฒนาการสาย Builder ผสาน Superpowers เข้ากับ SDLC อัตโนมัติของ Matt Pocock (to-issues, implement, tdd, code-review) เพื่อรันงานตั้งแต่สเปคจนถึงจบโค้ดแบบครบวงจร
+- **[เพลิงชำระล้าง (Purgatory Refactor)](skills/purgatory-refactor/SKILL.md):** ร่างวิวัฒนาการสาย Audit & Refactor ผสานความเหี้ยมของ Ponytail ในการลบขยะ เข้ากับการจัดโครงสร้าง Deep Module ของ Matt Pocock กวาดล้างและจัดระเบียบสถาปัตยกรรมใหม่ในคราวเดียว
 
 ### 🔮 วิสัยทัศน์แห่งอนาคต (Future Vision)
 - **Method 5 (External Vector Database - RAG):** เมื่อเรามีทรัพยากรมากพอ ข้าจะพัฒนาระบบคลังทักษะไปสู่ RAG เพื่อรองรับความรู้และสกิลระดับมหาศาล (รอท่านบัญชาในอนาคต)
