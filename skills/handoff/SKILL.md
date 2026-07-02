@@ -10,8 +10,9 @@ argument-hint: "ชื่อย่อ session (ถ้ามี)"
 **ห้ามก๊อปโค้ดทั้งก้อนลงเอกสาร** (กิน token + ทำให้ AI สับสน) — สรุปเป็นข้อความ อ้างอิง file:line แทน
 
 ## ที่เก็บ (กฎ Workspace)
-- ทุก workspace มีโฟลเดอร์กลาง `0_public_eco_doc/` ที่รากของ workspace — ทุกไฟล์ที่ ego_avatar สร้างให้จัดเข้าที่นี่อย่างมีระเบียบ
-- เอกสาร handoff อยู่ใน `0_public_eco_doc/handoff/`
+- ทุก workspace มีโฟลเดอร์กลางแยกตาม agent ที่ทำงาน: **`0_public_eco_doc_<agent>/`** — Claude ใช้ `0_public_eco_doc_claude/` · Antigravity ใช้ `0_public_eco_doc_antigravity/` (สมองก้อนเดียวกัน แต่แยกโฟลเดอร์กันชน + รู้ว่าใครสร้าง)
+- ทุกไฟล์ที่ agent สร้างให้จัดเข้าโฟลเดอร์ของตัวเองอย่างมีระเบียบ
+- เอกสาร handoff อยู่ใน `0_public_eco_doc_<agent>/handoff/`
 - ตั้งชื่อไฟล์: `YYYY-MM-DD-HH-MM_handoff_<ชื่อย่อ>_<wip|done>.md`
   - timestamp เรียงตามตัวอักษร = เรียงตามเวลา → **"ไฟล์ใหม่สุด = ตัวที่ต้องอ่าน"** โดยอัตโนมัติ ไม่ต้องมี pointer
   - `_wip` = session ยังค้าง · `_done` = งานจบแล้ว
@@ -39,7 +40,7 @@ status: wip | done
 - Redact ความลับเสมอ (API key, password, PII)
 
 ## READ — อ่าน handoff ตอน resume (เป็น Router ไม่ใช่ Executor)
-1. เปิด `0_public_eco_doc/handoff/` เลือก **ไฟล์ใหม่สุด** ของ session ที่จะทำต่อ (ถ้ามีหลาย session ปนกัน ถามท่านสั้นๆ)
+1. เปิด `0_public_eco_doc_<agent>/handoff/` เลือก **ไฟล์ใหม่สุด** ของ session ที่จะทำต่อ (ถ้ามีหลาย session ปนกัน ถามท่านสั้นๆ) — เผื่อดูโฟลเดอร์ของ agent อื่นด้วยถ้างานต่อเนื่องข้ามเครื่องมือ
 2. เช็ค staleness: `git log <pinned_commit>..HEAD --oneline` — ถ้ามี commit ใหม่หลังจากนั้น แจ้งท่านว่า handoff อาจเก่า ให้ดู diff ก่อน
 3. สรุปกลับให้ท่าน **3 บรรทัด**: GOAL / ค้างตรงไหน / NEXT
 4. Route ต่อ: ถ้าชี้ไป plan → `executing-plans` · ถ้าเป็นข้อเท็จจริงถาวร → `memory-management` · นอกนั้นลุยต่อเอง
