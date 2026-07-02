@@ -83,6 +83,22 @@
 - **[เกราะป้องกันข้อมูล (PDPA Consent TH)](skills/pdpa-consent-th/SKILL.md):** ทักษะการสร้างระบบ Cookie Banner 2 ระดับแบบรวดเร็ว พร้อมร่างเอกสาร Privacy Policy/ToS แบบ SaaS และระบบรับคำร้อง Manual
 - **[วิจิตรศิลป์แห่งแลนดิ้งเพจ (Landing Page Craft)](skills/landing-page-craft/SKILL.md):** ทักษะการออกแบบหน้า Landing Page ให้มี Conversion Rate สูงสุด เน้นกฎ 1:1 Attention Ratio, Benefit-Driven Copy, รูปแบบฟอร์มสั้น และประสิทธิภาพการโหลดที่เร็วทะลุขีดจำกัด
 - **[เนตรผสานปีภาษี (Tax Year Master Sync)](skills/tax-year-master-sync/SKILL.md):** ทักษะการเช็ค Master Data เมื่อมีการเพิ่มปีภาษีใหม่ เพื่อป้องกันบั๊กจากการตั้งค่า DB (เช่น ITPC_PND51_TAX_RATE) ขาดหาย
+- **[ซักไซ้ซอกแซก (Grill-me)](skills/grill-me/SKILL.md):** กลืนกินจาก mattpocock/skills สัมภาษณ์อย่างไม่ปราณีเพื่อขัดเกลาแผนงานหรือดีไซน์
+- **[ส่งไม้ต่อ (Handoff)](skills/handoff/SKILL.md):** กลืนกินจาก mattpocock/skills สรุปการสนทนาปัจจุบันเป็นเอกสาร Handoff เพื่อให้ Agent ตัวอื่นรับช่วงต่อ
+- **[ถ่ายทอดวิชา (Teach)](skills/teach/SKILL.md):** กลืนกินจาก mattpocock/skills สอนสกิลหรือคอนเซปต์ใหม่ให้ผู้ใช้ใน Workspace ปัจจุบัน
+- **[คัมภีร์สร้างสกิล (Writing Great Skills)](skills/writing-great-skills/SKILL.md):** กลืนกินจาก mattpocock/skills แหล่งอ้างอิงและหลักการในการเขียนและแก้ไขสกิลให้มีคุณภาพ
+- **[สอบถามกูรู (Ask Matt)](skills/ask-matt/SKILL.md):** กลืนกินจาก mattpocock/skills ระบบ Router ช่วยแนะนำว่าสกิลหรือ Flow ไหนที่เหมาะสมกับสถานการณ์ของคุณ
+- **[เนตรตรวจโค้ด (Code Review)](skills/code-review/SKILL.md):** กลืนกินจาก mattpocock/skills รีวิวโค้ดโดยเทียบกับ 2 แกนหลัก (Standards และ Spec) ใช้ Sub-agents ทำงานขนานกันแล้วสรุปผล
+- **[ปั้นโมเดลโดเมน (Domain Modeling)](skills/domain-modeling/SKILL.md):** กลืนกินจาก mattpocock/skills สร้างและขัดเกลา Domain Model ของโปรเจกต์ เพื่อนิยามคำศัพท์และสถาปัตยกรรม
+- **[ซักไซ้สร้างเอกสาร (Grill with Docs)](skills/grill-with-docs/SKILL.md):** กลืนกินจาก mattpocock/skills สัมภาษณ์ขัดเกลาแผน พร้อมกับสร้างเอกสาร (ADRs และ Glossary) ไปในตัว
+- **[ลงมือสังหาร (Implement)](skills/implement/SKILL.md):** กลืนกินจาก mattpocock/skills ลงมือเขียนโค้ดและพัฒนาฟีเจอร์ตาม PRD หรือ Issue ที่ได้รับ
+- **[รีดเร้นสถาปัตยกรรม (Improve Codebase Architecture)](skills/improve-codebase-architecture/SKILL.md):** กลืนกินจาก mattpocock/skills สแกนโปรเจกต์เพื่อหาจุดที่ปรับปรุงได้ แสดงเป็น HTML Report และเจาะลึกแก้ไข
+- **[หล่อหลอมต้นแบบ (Prototype)](skills/prototype/SKILL.md):** กลืนกินจาก mattpocock/skills สร้างตัวต้นแบบ (Throwaway) เพื่อพิสูจน์ความถูกต้องของ Logic หรือดีไซน์ UI
+- **[วางรากฐานสกิล (Setup Matt Pocock Skills)](skills/setup-matt-pocock-skills/SKILL.md):** กลืนกินจาก mattpocock/skills ตั้งค่าระบบ Issue Tracker และเอกสารต่างๆ ก่อนเริ่มใช้งานสกิลสายวิศวกรรมอื่นๆ
+- **[วิถีทดสอบนำทาง (TDD)](skills/tdd/SKILL.md):** กลืนกินจาก mattpocock/skills พัฒนาด้วยกระบวนการ Test-Driven Development (Red-Green-Refactor)
+- **[สับย่อยประเด็น (To Issues)](skills/to-issues/SKILL.md):** กลืนกินจาก mattpocock/skills แตกแผนงาน หรือ PRD ออกเป็น Issue ย่อยๆ ที่พร้อมให้ Agent หยิบไปทำต่อ
+- **[หลอมรวม PRD (To PRD)](skills/to-prd/SKILL.md):** กลืนกินจาก mattpocock/skills สังเคราะห์บทสนทนาทั้งหมดให้กลายเป็นเอกสาร PRD และส่งขึ้น Issue Tracker
+- **[คัดกรองปัญหา (Triage)](skills/triage/SKILL.md):** กลืนกินจาก mattpocock/skills จัดการ Issue และ PR จากภายนอกผ่านกระบวนการจัดประเภท ตรวจสอบ และเขียนบรีฟ
 
 ### 👑 Ultimate Skills
 - (ยังไม่มี)

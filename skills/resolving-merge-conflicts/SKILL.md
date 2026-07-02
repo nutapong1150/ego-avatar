@@ -1,15 +1,14 @@
 ---
-name: แก้ Merge Conflict (Resolving Merge Conflicts)
-type: Unique Skill
-source: mattpocock/skills — resolving-merge-conflicts
+name: resolving-merge-conflicts
+description: "Use when you need to resolve an in-progress git merge/rebase conflict."
 ---
 
-# แก้ Merge Conflict
+1. **See the current state** of the merge/rebase. Check git history, and the conflicting files.
 
-5 ขั้นตอน — ห้าม `--abort`
+2. **Find the primary sources** for each conflict. Understand deeply why each change was made, and what the original intent was. Read the commit messages, check the PRs, check original issues/tickets.
 
-1. ดู state ปัจจุบัน (git history + ไฟล์ที่ conflict)
-2. หา source ของแต่ละ conflict — อ่าน commit message, PR, issue เพื่อเข้าใจ intent
-3. แก้แต่ละ hunk: รักษา intent ทั้งสองฝั่งถ้าทำได้; ถ้าขัดกัน เลือกฝั่งที่ตรงเป้าหมาย merge + note trade-off
-4. รัน automated checks: typecheck → tests → format
-5. Stage ทั้งหมดแล้ว commit; ถ้า rebase ให้ continue จนเสร็จ
+3. **Resolve each hunk.** Preserve both intents where possible. Where incompatible, pick the one matching the merge's stated goal and note the trade-off. Do **not** invent new behaviour. Always resolve; never `--abort`.
+
+4. Discover the project's **automated checks** and run them — typically typecheck, then tests, then format. Fix anything the merge broke.
+
+5. **Finish the merge/rebase.** Stage everything and commit. If rebasing, continue the rebase process until all commits are rebased.
