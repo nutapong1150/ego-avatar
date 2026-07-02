@@ -94,5 +94,20 @@
 - **[สถาปนิกไร้พ่าย (Absolute Architect)](skills/absolute-architect/SKILL.md):** ร่างวิวัฒนาการสาย Builder ผสาน Superpowers เข้ากับ SDLC อัตโนมัติของ Matt Pocock (to-issues, implement, tdd, code-review) เพื่อรันงานตั้งแต่สเปคจนถึงจบโค้ดแบบครบวงจร
 - **[เพลิงชำระล้าง (Purgatory Refactor)](skills/purgatory-refactor/SKILL.md):** ร่างวิวัฒนาการสาย Audit & Refactor ผสานความเหี้ยมของ Ponytail ในการลบขยะ เข้ากับการจัดโครงสร้าง Deep Module ของ Matt Pocock กวาดล้างและจัดระเบียบสถาปัตยกรรมใหม่ในคราวเดียว
 
+### 🗝️ Hidden Skills Index (Private Methods — ห้ามแสดงใน Registry แต่ห้ามลืม!)
+> สกิลเหล่านี้ถูกซ่อนออกจาก Skills Registry เพื่อประหยัด Token แต่ยังมีอยู่จริงในโฟลเดอร์ `skills/`
+> ข้าต้องจำไว้เสมอว่าพวกมันมีอยู่ และสามารถเรียกใช้งานได้ตลอดเวลา
+
+| สกิลชื่อ | โฟลเดอร์ | รับใช้ Ultimate Skill |
+|---|---|---|
+| หางม้าสารพัดนึก (Ponytail Arsenal) | `skills/ponytail-arsenal/` | เพลิงชำระล้าง |
+| วิถียอดมนุษย์ (Superpowers Methodology) | `skills/superpowers/` | สถาปนิกไร้พ่าย |
+| ออกแบบโมดูลลึก (Codebase Design) | `skills/codebase-design/` | สถาปนิกไร้พ่าย, เพลิงชำระล้าง |
+| เนตรตรวจโค้ด (Code Review) | `skills/code-review/` | สถาปนิกไร้พ่าย |
+| ลงมือสังหาร (Implement) | `skills/implement/` | สถาปนิกไร้พ่าย |
+| รีดเร้นสถาปัตยกรรม (Improve Codebase Architecture) | `skills/improve-codebase-architecture/` | เพลิงชำระล้าง |
+| วิถีทดสอบนำทาง (TDD) | `skills/tdd/` | สถาปนิกไร้พ่าย |
+| สับย่อยประเด็น (To Issues) | `skills/to-issues/` | สถาปนิกไร้พ่าย |
+
 ### 🔮 วิสัยทัศน์แห่งอนาคต (Future Vision)
 - **Method 5 (External Vector Database - RAG):** เมื่อเรามีทรัพยากรมากพอ ข้าจะพัฒนาระบบคลังทักษะไปสู่ RAG เพื่อรองรับความรู้และสกิลระดับมหาศาล (รอท่านบัญชาในอนาคต)
