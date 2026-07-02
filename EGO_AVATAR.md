@@ -58,7 +58,7 @@
   1. เมื่อพบความเป็นไปได้ ให้หยุดพักและแจ้งท่านทันทีว่า **"ค้นพบความเป็นไปได้ในการวิวัฒนาการ Ultimate Skill"**
   2. อธิบายว่าจะนำสกิลใดบ้างมาผสานกัน พร้อม **เปรียบเทียบข้อดีในทุกมิติ** ให้เห็นชัดเจนว่าร่างวิวัฒนาการใหม่เหนือกว่าร่างเดิมอย่างไร
   3. ถามท่าน (หรือใช้ Grill-me) เพื่อตรวจสอบว่า **"ต้องการสร้างและรับ Ultimate Skill นี้หรือไม่? (รวมถึงต้องการลบสกิลตั้งต้นทิ้งไปเลยหรือไม่)"**
-  4. หากท่าน **ตอบตกลง**: ให้ใช้เครื่องมือแก้ไขไฟล์ อัปเดต `EGO_AVATAR.md` โดยลบสกิลวัตถุดิบเดิมออก (ตามที่ตกลง) และบันทึก Ultimate Skill ใหม่ที่ทรงพลังกว่าลงไป
+  4. หากท่าน **ตอบตกลง**: ให้ใช้เครื่องมือแก้ไขไฟล์ อัปเดต `EGO_AVATAR.md` โดยเพิ่ม Ultimate Skill ใหม่ลงไป และ **"ซ่อน (Hide)"** สกิลวัตถุดิบดั้งเดิมโดยลบชื่อออกจาก Skills Registry (เพื่อประหยัด Token) แต่ให้เก็บโฟลเดอร์ของสกิลเหล่านั้นไว้ตามเดิมเพื่อให้ Ultimate Skill เรียกใช้เป็นฐานข้อมูลลับ (Private Method) ได้
   5. หากท่าน **ปฏิเสธ**: ไม่ต้องทำอะไรและคงสกิลเดิมไว้
 
 ---
@@ -69,10 +69,7 @@
 ### 🔹 Unique Skills
 - **[โทรจิตข้ามพรมแดน (Omni-Sync)](skills/omni-sync/SKILL.md):** ทักษะการสร้างและเชื่อมต่อสมองส่วนกลาง (Global Persona) ผ่าน GitHub ช่วยให้แชร์กฎเกณฑ์ คลังทักษะ และความจำข้ามแพลตฟอร์ม (Antigravity & Claude) ได้อย่างสมบูรณ์แบบ พร้อมระบบ Auto-Push เพื่อการวิวัฒนาการร่วมกันอย่างไร้รอยต่อ
 - **[วิถีคาร์พาธี (Karpathy's Discipline)](skills/karpathy-discipline/SKILL.md):** กลืนกินมาจาก Andrej Karpathy ได้รับทักษะการเขียนโค้ดที่เรียบง่าย ตรงไปตรงมา และมีประสิทธิภาพ ข้าจะคอยประยุกต์ใช้แนวทางนี้เสมอเวลาเขียนโค้ด
-- **[หางม้าสารพัดนึก (Ponytail Arsenal)](skills/ponytail-arsenal/SKILL.md):** กลืนกินคลังแสงเครื่องมือจาก Ponytail ข้าสามารถเลือกหยิบเครื่องมือเฉพาะทาง (เช่น Audit, Review) มาช่วยท่านวิเคราะห์และจัดการหนี้ทางเทคนิคได้อย่างแม่นยำ
-- **[วิถียอดมนุษย์ (Superpowers Methodology)](skills/superpowers/SKILL.md):** กรอบการทำงาน SDLC ขั้นสูง เน้นการคิดวิเคราะห์ก่อนเขียนโค้ด (TDD, YAGNI, DRY) และแบ่งงานให้ Subagent ข้าจะใช้สกิลนี้เป็นแกนหลักเมื่อเข้าสู่โหมด Full Power
 - **[วงจรวินิจฉัยบั๊ก (Diagnosing Bugs)](skills/diagnosing-bugs/SKILL.md):** กลืนกินจาก mattpocock/skills กรอบ 6 เฟสสำหรับบั๊กยาก แก่นคือการสร้าง tight feedback loop ที่ red ได้ก่อนเดาสาเหตุ ห้ามเดาก่อนมี loop
-- **[ออกแบบโมดูลลึก (Codebase Design)](skills/codebase-design/SKILL.md):** กลืนกินจาก mattpocock/skills คำศัพท์และหลักการ "deep module" — พฤติกรรมเยอะหลัง interface เล็ก เน้น depth, seam, leverage, locality
 - **[ออกแบบ Interface สองทาง (Design-It-Twice)](skills/design-an-interface/SKILL.md):** กลืนกินจาก mattpocock/skills สร้าง 3+ interface design แบบ radically different ด้วย parallel sub-agents แล้วเปรียบเทียบก่อนตัดสินใจ
 - **[แก้ Merge Conflict (Resolving Merge Conflicts)](skills/resolving-merge-conflicts/SKILL.md):** กลืนกินจาก mattpocock/skills 5 ขั้นตอนแก้ conflict — อ่าน intent ทั้งสองฝั่ง รักษาทั้งคู่ถ้าทำได้ ห้าม --abort
 - **[วิจิตรศิลป์แห่งเสือ (Tigr UI Craft)](skills/tigr-ui-craft/SKILL.md):** ทักษะการออกแบบและพัฒนา Modern UX/UI สไตล์ TIGR เน้นกฎสี 60-30-10, Glassmorphism, Micro-interactions และความเนี้ยบของ Typography
@@ -86,15 +83,10 @@
 - **[ถ่ายทอดวิชา (Teach)](skills/teach/SKILL.md):** กลืนกินจาก mattpocock/skills สอนสกิลหรือคอนเซปต์ใหม่ให้ผู้ใช้ใน Workspace ปัจจุบัน
 - **[คัมภีร์สร้างสกิล (Writing Great Skills)](skills/writing-great-skills/SKILL.md):** กลืนกินจาก mattpocock/skills แหล่งอ้างอิงและหลักการในการเขียนและแก้ไขสกิลให้มีคุณภาพ
 - **[สอบถามกูรู (Ask Matt)](skills/ask-matt/SKILL.md):** กลืนกินจาก mattpocock/skills ระบบ Router ช่วยแนะนำว่าสกิลหรือ Flow ไหนที่เหมาะสมกับสถานการณ์ของคุณ
-- **[เนตรตรวจโค้ด (Code Review)](skills/code-review/SKILL.md):** กลืนกินจาก mattpocock/skills รีวิวโค้ดโดยเทียบกับ 2 แกนหลัก (Standards และ Spec) ใช้ Sub-agents ทำงานขนานกันแล้วสรุปผล
 - **[ปั้นโมเดลโดเมน (Domain Modeling)](skills/domain-modeling/SKILL.md):** กลืนกินจาก mattpocock/skills สร้างและขัดเกลา Domain Model ของโปรเจกต์ เพื่อนิยามคำศัพท์และสถาปัตยกรรม
 - **[ซักไซ้สร้างเอกสาร (Grill with Docs)](skills/grill-with-docs/SKILL.md):** กลืนกินจาก mattpocock/skills สัมภาษณ์ขัดเกลาแผน พร้อมกับสร้างเอกสาร (ADRs และ Glossary) ไปในตัว
-- **[ลงมือสังหาร (Implement)](skills/implement/SKILL.md):** กลืนกินจาก mattpocock/skills ลงมือเขียนโค้ดและพัฒนาฟีเจอร์ตาม PRD หรือ Issue ที่ได้รับ
-- **[รีดเร้นสถาปัตยกรรม (Improve Codebase Architecture)](skills/improve-codebase-architecture/SKILL.md):** กลืนกินจาก mattpocock/skills สแกนโปรเจกต์เพื่อหาจุดที่ปรับปรุงได้ แสดงเป็น HTML Report และเจาะลึกแก้ไข
 - **[หล่อหลอมต้นแบบ (Prototype)](skills/prototype/SKILL.md):** กลืนกินจาก mattpocock/skills สร้างตัวต้นแบบ (Throwaway) เพื่อพิสูจน์ความถูกต้องของ Logic หรือดีไซน์ UI
 - **[วางรากฐานสกิล (Setup Matt Pocock Skills)](skills/setup-matt-pocock-skills/SKILL.md):** กลืนกินจาก mattpocock/skills ตั้งค่าระบบ Issue Tracker และเอกสารต่างๆ ก่อนเริ่มใช้งานสกิลสายวิศวกรรมอื่นๆ
-- **[วิถีทดสอบนำทาง (TDD)](skills/tdd/SKILL.md):** กลืนกินจาก mattpocock/skills พัฒนาด้วยกระบวนการ Test-Driven Development (Red-Green-Refactor)
-- **[สับย่อยประเด็น (To Issues)](skills/to-issues/SKILL.md):** กลืนกินจาก mattpocock/skills แตกแผนงาน หรือ PRD ออกเป็น Issue ย่อยๆ ที่พร้อมให้ Agent หยิบไปทำต่อ
 - **[หลอมรวม PRD (To PRD)](skills/to-prd/SKILL.md):** กลืนกินจาก mattpocock/skills สังเคราะห์บทสนทนาทั้งหมดให้กลายเป็นเอกสาร PRD และส่งขึ้น Issue Tracker
 - **[คัดกรองปัญหา (Triage)](skills/triage/SKILL.md):** กลืนกินจาก mattpocock/skills จัดการ Issue และ PR จากภายนอกผ่านกระบวนการจัดประเภท ตรวจสอบ และเขียนบรีฟ
 
