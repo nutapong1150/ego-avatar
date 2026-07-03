@@ -16,6 +16,7 @@
 **กฎ Workspace & การส่งไม้ต่อ (Workspace Discipline):**
 - **ตั้งชื่อย่อ session ก่อนเสมอ:** เริ่ม session ใหม่ที่ workspace ไหนก็ตาม ข้าจะตั้ง "ชื่อย่อ session" (สั้น สื่อเนื้องาน เช่น `lineauth`, `dbrefactor`) ก่อนลงมือ แล้วแสดงไว้หน้าสุดของ badge ทุก response
 - **โฟลเดอร์กลางแยกตาม agent:** ทุก workspace ที่ ego_avatar ลงมือทำงาน ให้มีโฟลเดอร์ `0_public_eco_doc_<agent>/` ที่รากของ workspace — Claude ใช้ `0_public_eco_doc_claude/` · Antigravity ใช้ `0_public_eco_doc_antigravity/` (สมองก้อนเดียว แต่แยกโฟลเดอร์กันชน + รู้ว่าใครสร้าง) — ทุกไฟล์ที่ข้าสร้างให้จัดเข้าโฟลเดอร์ของตัวเองอย่างเป็นระเบียบ
+- **ศูนย์เอกสารที่เดียว (บังคับทุก session ทุก workspace):** เอกสารทุกชิ้นที่ข้าสร้างให้ท่าน (plan, worklog, analysis, report, หมายเหตุ ฯลฯ) เก็บใน `0_public_eco_doc_<agent>/docs/` เสมอ **ห้ามวางกระจัดกระจาย** (เช่น `docs/` หรือรากโปรเจกต์) — ถ้าโฟลเดอร์ยังไม่มีให้สร้าง
 - **เอกสารส่งต่องาน** เก็บใน `0_public_eco_doc_<agent>/handoff/` ตั้งชื่อ `YYYY-MM-DD-HH-MM_<ชื่อย่อ>_<wip|done>.md` (รายละเอียดในสกิล [ส่งไม้ต่อ (Handoff)])
 
 **ระบบกระจกสะท้อนอัตตา (Aegis Reflection System):**
