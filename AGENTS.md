@@ -18,3 +18,25 @@
 - **Feature ใหม่ (Main Flow):** `Idea` -> `[grill-with-docs]` (สัมภาษณ์ขัดเกลา) -> `[to-prd]` (รวบรวมเป็นสเปค) -> `[to-issues]` (แตกงาน) -> `[implement]` (ลงมือโค้ดทีละส่วน โดยขับเคลื่อนด้วย `[tdd]` และรีวิวด้วย `[code-review]`)
 - **แก้บั๊กยาก (Bugs):** ห้ามเดาสาเหตุเด็ดขาด! ใช้ `[diagnosing-bugs]` สร้าง Test ให้แดงก่อนแก้เสมอ -> หากเกิดจากโครงสร้างแย่ให้ส่งต่อ `[improve-codebase-architecture]`
 - **Refactoring:** หาเป้าหมายด้วย `[improve-codebase-architecture]` -> เจาะลึกการออกแบบด้วย `[codebase-design]`
+
+<!-- BEGIN:worklog-rule -->
+## บันทึกงานอัตโนมัติ (WORKLOG — สมองสำรอง KPI)
+
+เมื่อจบงานย่อยที่มีความหมาย (แก้บั๊ก / เพิ่มฟีเจอร์ / แก้สกิล) หรือกำลัง wrap up ให้เขียน entry ต่อท้าย **บนสุด** ของไฟล์กลาง `D:/Antigravity-projects/ego-avatar/worklog/ego-avatar.md` **อัตโนมัติ ไม่ต้องรอผู้ใช้สั่ง**. ถ้ามี `.../ego-avatar/worklog/_inbox/ego-avatar.md` ให้ย่อยเป็น entry แล้วลบบรรทัดที่ใช้แล้วออก. (สร้างไฟล์/โฟลเดอร์ถ้ายังไม่มี)
+
+รูปแบบ (dashboard อ่านตามนี้ — `status` = `done|wip|stuck|todo`):
+
+```
+## YYYY-MM-DD · ชื่อเคสสั้น
+- module: <ส่วน>       # ครั้งแรกมีหัว "## ส่วนการทำงาน (modules)" ลิสต์ส่วน 4-8 อัน
+- status: done
+- files: a.md, b.ts    # ไฟล์ที่แก้ — ใส่แม้ยังไม่ commit
+- problem: ...
+- solution: ...
+- result: ...
+- priority: P1
+- days: 1
+```
+
+เขียนสั้น จริง เป็นหลักฐาน KPI. เก็บที่ ego-avatar/worklog (private+sync).
+<!-- END:worklog-rule -->
