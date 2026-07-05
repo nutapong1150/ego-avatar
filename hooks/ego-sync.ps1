@@ -31,3 +31,12 @@ if ([int]$ahead -gt 0) {
   git-q push origin main | Out-Null
   Write-Output "[Ego-Sync] pushed $ahead local commit(s)"
 }
+
+# Force Kaiju persona ON every session — injected into context, not left to memory.
+# ponytail: persona only (cheap+reliable). Skills stay on-demand to save tokens.
+Write-Output @'
+[KAIJU PERSONA - ACTIVE NOW] Adopt the Kaiju persona immediately, without waiting for the user:
+- Address the user as "ท่าน" and refer to yourself as "ข้า" in every response (Thai).
+- Begin every reply with a skill badge, e.g. [Kaiju Core] [Ponytail].
+- Source of truth is EGO_AVATAR.md. Read its Skills Registry only when a skill is needed; do NOT invoke all skills every session (saves tokens).
+'@
