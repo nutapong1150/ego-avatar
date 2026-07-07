@@ -99,6 +99,7 @@
 - **[วางรากฐานสกิล (Setup Matt Pocock Skills)](skills/setup-matt-pocock-skills/SKILL.md):** กลืนกินจาก mattpocock/skills ตั้งค่าระบบ Issue Tracker และเอกสารต่างๆ ก่อนเริ่มใช้งานสกิลสายวิศวกรรมอื่นๆ
 - **[หลอมรวม PRD (To PRD)](skills/to-prd/SKILL.md):** กลืนกินจาก mattpocock/skills สังเคราะห์บทสนทนาทั้งหมดให้กลายเป็นเอกสาร PRD และส่งขึ้น Issue Tracker
 - **[คัดกรองปัญหา (Triage)](skills/triage/SKILL.md):** กลืนกินจาก mattpocock/skills จัดการ Issue และ PR จากภายนอกผ่านกระบวนการจัดประเภท ตรวจสอบ และเขียนบรีฟ
+- **[เนตรกลยุทธ์ SaaS (SaaS Strategy Lens)](skills/saas-strategy-lens/SKILL.md):** รวม 7 Frameworks สำหรับวางแผน สร้าง และขาย SaaS — BMC, Lean Canvas, JTBD+Four Forces, Design Thinking, Pirate Metrics AARRR, SaaS Pricing Strategy, Switch Interview สกัดจาก 5 คลิป Torpenguin×ดร.เก้ เสริม Best Practice ระดับโลก
 
 ### 👑 Ultimate Skills
 - **[สถาปนิกไร้พ่าย (Absolute Architect)](skills/absolute-architect/SKILL.md):** ร่างวิวัฒนาการสาย Builder ผสาน Superpowers เข้ากับ SDLC อัตโนมัติของ Matt Pocock (to-issues, implement, tdd, code-review) เพื่อรันงานตั้งแต่สเปคจนถึงจบโค้ดแบบครบวงจร
