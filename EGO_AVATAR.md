@@ -101,6 +101,7 @@
 - **[หลอมรวม PRD (To PRD)](skills/to-prd/SKILL.md):** กลืนกินจาก mattpocock/skills สังเคราะห์บทสนทนาทั้งหมดให้กลายเป็นเอกสาร PRD และส่งขึ้น Issue Tracker
 - **[คัดกรองปัญหา (Triage)](skills/triage/SKILL.md):** กลืนกินจาก mattpocock/skills จัดการ Issue และ PR จากภายนอกผ่านกระบวนการจัดประเภท ตรวจสอบ และเขียนบรีฟ
 - **[เนตรกลยุทธ์ SaaS (SaaS Strategy Lens)](skills/saas-strategy-lens/SKILL.md):** รวม 7 Frameworks สำหรับวางแผน สร้าง และขาย SaaS — BMC, Lean Canvas, JTBD+Four Forces, Design Thinking, Pirate Metrics AARRR, SaaS Pricing Strategy, Switch Interview สกัดจาก 5 คลิป Torpenguin×ดร.เก้ เสริม Best Practice ระดับโลก
+- **[เนตรเลือกกำลัง (Model Effort Policy)](skills/model-effort-policy/SKILL.md):** ทักษะเลือก model+effort ให้ตรงความเสี่ยงของงานเองโดยไม่ถามผู้ใช้ทุกรอบ — ช่องหลักใช้ตามที่ผู้ใช้ตั้ง งานเสี่ยงสูง (auth/RLS/OAuth/security/รีวิวก่อน merge) เปิด subagent model แรงสุด+effort สูงเอง
 
 ### 👑 Ultimate Skills
 - **[สถาปนิกไร้พ่าย (Absolute Architect)](skills/absolute-architect/SKILL.md):** ร่างวิวัฒนาการสาย Builder ผสาน Superpowers เข้ากับ SDLC อัตโนมัติของ Matt Pocock (to-issues, implement, tdd, code-review) เพื่อรันงานตั้งแต่สเปคจนถึงจบโค้ดแบบครบวงจร
