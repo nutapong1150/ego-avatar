@@ -105,6 +105,7 @@
 - **[เนตรเลือกกำลัง (Model Effort Policy)](skills/model-effort-policy/SKILL.md):** ทักษะเลือก model+effort ให้ตรงความเสี่ยงของงานเองโดยไม่ถามผู้ใช้ทุกรอบ — ช่องหลักใช้ตามที่ผู้ใช้ตั้ง งานเสี่ยงสูง (auth/RLS/OAuth/security/รีวิวก่อน merge) เปิด subagent model แรงสุด+effort สูงเอง
 - **[ตารางกริดไร้พ่าย (Gridgeist)](skills/gridgeist/SKILL.md):** กลืนกินจาก ohmiler/gridgeist ทักษะสร้าง/รีดีไซน์/รีวิว web interface ให้หลุดพ้นจากความจืดชืดแบบ Generic AI SaaS เน้น grid เข้ม, typography แม่นยำ, สไตล์ Swiss/Editorial, เส้นขอบมีเหตุผล ใช้ได้ทั้ง React/Next.js/Tailwind/HTML-CSS
 - **[ตราประทับไร้สลอป (Hallmark)](skills/hallmark/SKILL.md):** กลืนกินจาก Nutlope/hallmark ทักษะสร้าง/รีวิว/รีดีไซน์/สกัด Design DNA เว็บให้หลุดพ้น AI-slop ด้วยกฎ 57 slop-test gates, 20 ธีม, คลัง macrostructure/component cookbook ขนาดใหญ่ รองรับ 4 โหมด: build (default) / audit / redesign / study — ใช้คู่กับ Gridgeist เมื่อต้องการงาน UI พรีเมียมหลุดกรอบ SaaS ทั่วไป
+- **[วิจิตรศิลป์ไร้ที่ติ (Impeccable UI)](skills/impeccable-ui/SKILL.md):** กลืนกินมาจาก Impeccable (pbakaus) ชุดคำสั่งและกฎการออกแบบ UI/UX ที่ไร้ที่ติ หลีกเลี่ยง AI-slop (ห้ามใช้ฟอนต์โหล, ห้ามซ้อนการ์ด, ห้ามเทาบนสี) เพื่อยกระดับ Frontend Design
 
 ### 👑 Ultimate Skills
 - **[สถาปนิกไร้พ่าย (Absolute Architect)](skills/absolute-architect/SKILL.md):** ร่างวิวัฒนาการสาย Builder ผสาน Superpowers เข้ากับ SDLC อัตโนมัติของ Matt Pocock (to-issues, implement, tdd, code-review) เพื่อรันงานตั้งแต่สเปคจนถึงจบโค้ดแบบครบวงจร
