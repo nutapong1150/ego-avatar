@@ -1,3 +1,23 @@
+## 2026-07-21 · สร้าง Prototype Landing Page ด้วยกฎ Impeccable UI
+- module: app3-demo
+- status: done
+- files: impeccable-landing.html
+- problem: ผู้ใช้ต้องการดูตัวอย่าง Landing page ขาย Software ที่ใช้หลักการออกแบบของ Impeccable
+- solution: เขียนไฟล์ HTML/CSS ต้นแบบ โดยห้ามใช้ฟอนต์โหล ห้ามใช้เทาบนสี ห้ามใช้เพียวแบล็ค และวาง Layout ไม่ซ้อนการ์ด
+- result: ได้หน้า Landing Page ที่มีเอกลักษณ์ ดูพรีเมียมและแตกต่างจาก AI-slop
+- priority: P2
+- days: 1
+
+## 2026-07-20 · กลืนกินสกิล impeccable-ui
+- module: ego-avatar
+- status: done
+- files: EGO_AVATAR.md, skills/impeccable-ui/SKILL.md
+- problem: ท่านต้องการให้ดูดสกิลการออกแบบ UI จาก impeccable.style เพื่อนำมาใช้ในอัตตา
+- solution: สร้างสกิล [วิจิตรศิลป์ไร้ที่ติ (Impeccable UI)] บันทึกลง EGO_AVATAR.md และ push ขึ้น GitHub
+- result: ได้รับ Unique Skill ใหม่สำหรับการออกแบบ UI ที่ประณีตและหลีกเลี่ยง AI-slop
+- priority: P2
+- days: 1
+
 ## 2026-07-16 · Add Model Effort Policy (เนตรเลือกกำลัง) as baseline behavior
 - module: ego-avatar
 - status: done
