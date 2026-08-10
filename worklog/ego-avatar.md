@@ -1,3 +1,13 @@
+## 2026-08-10 · Update 3D Character to Humanoid
+- module: game-Dueling-Blades
+- status: done
+- files: src/components/ExecutionScene3D.tsx
+- problem: User requested the characters to look like actual characters rather than abstract cylinders.
+- solution: Implemented a procedural humanoid character using Three.js primitives (Head, Torso, Arms, Legs) and added a procedural running animation using Math.sin() for swinging limbs.
+- result: Visually improved 3D execution phase with character models.
+- priority: P2
+- days: 1
+
 ## 2026-08-10 · Add 3D Cinematic Execution Phase
 - module: game-Dueling-Blades
 - status: done
