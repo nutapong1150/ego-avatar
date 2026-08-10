@@ -1,3 +1,33 @@
+## 2026-08-10 · Create Dueling Blades Prototype
+- module: game-Dueling-Blades
+- status: done
+- files: package.json, src/App.tsx, src/components/ArenaCanvas.tsx, src/logic/useGameState.ts
+- problem: Build Web-based Prototype for Simultaneous Turn-based Combat (Dueling Blades clone).
+- solution: Created React + TS + Canvas game engine with phase state machine, movement circle, attack arc cone, particle VFX, and modern glassmorphic HUD.
+- result: Build succeeded with zero errors.
+- priority: P1
+- days: 1
+
+## 2026-08-03 � Fix maven-release-plugin scm connection missing
+- module: d-mytax-client
+- status: done
+- files: D:\WORK\mytax-ww\d-mytax-client\pom.xml
+- problem: maven-release-plugin:prepare failed because scm connection is missing in pom.xml.
+- solution: Added <scm> block with git remote URL to pom.xml.
+- result: Jenkins pipeline can now perform release.
+- priority: P2
+- days: 1
+
+## 2026-08-03 � Fix Jenkins app_name missing property
+- module: devops
+- status: done
+- files: none
+- problem: Jenkins pipeline failed with 'No such property: app_name for class: groovy.lang.Binding'
+- solution: Identified that the variable app_name is not defined in the Groovy scope or environment block.
+- result: Provided explanation to the user.
+- priority: P2
+- days: 1
+
 ## 2026-07-21 · สร้าง Prototype Landing Page ด้วยกฎ Impeccable UI
 - module: app3-demo
 - status: done
@@ -58,6 +88,8 @@
 - result: à¸ªà¸³à¹€à¸£à¹‡à¸ˆ à¸ªà¸£à¹‰à¸²à¸‡à¹„à¸Ÿà¸¥à¹Œ note-me à¸•à¸²à¸¡à¸£à¸¹à¸›à¹à¸šà¸šà¸—à¸µà¹ˆà¸à¸³à¸«à¸™à¸”à¹€à¸£à¸µà¸¢à¸šà¸£à¹‰à¸­à¸¢à¹à¸¥à¹‰à¸§
 - priority: P2
 - days: 1
+
+
 
 
 
