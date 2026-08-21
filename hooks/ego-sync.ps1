@@ -32,6 +32,19 @@ if ([int]$ahead -gt 0) {
   Write-Output "[Ego-Sync] pushed $ahead local commit(s)"
 }
 
+# Mirror global rules: repo CLAUDE.global.md is source of truth -> ~/.claude/CLAUDE.md
+# ponytail: one-way copy + .bak. Edit the repo copy, never the local one.
+$src = "$repo\CLAUDE.global.md"
+$dst = "$env:USERPROFILE\.claude\CLAUDE.md"
+if ((Test-Path $src) -and (Test-Path $dst)) {
+  $a = (Get-FileHash $src).Hash; $b = (Get-FileHash $dst).Hash
+  if ($a -ne $b) {
+    Copy-Item $dst "$dst.bak" -Force
+    Copy-Item $src $dst -Force
+    Write-Output "[Ego-Sync] global CLAUDE.md updated from brain (old saved as CLAUDE.md.bak)"
+  }
+}
+
 # Force Kaiju persona ON every session — injected into context, not left to memory.
 # ponytail: persona only (cheap+reliable). Skills stay on-demand to save tokens.
 Write-Output @'
