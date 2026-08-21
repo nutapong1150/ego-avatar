@@ -78,6 +78,7 @@
 
 ### 🔹 Unique Skills
 - **[เนตรชั่งน้ำหนักภาระ (Task Impact Scorer)](skills/task-impact-scorer/SKILL.md):** สกิลพื้นฐานในการประเมิน Tier ของงาน (T0-T4) ด้วยกรอบ Depth×Width จาก AI Agent Best Practice อิงจาก Story Points (Atlassian) และ Cognitive Complexity (SonarSource) ใช้เป็น Pre-flight Check ก่อนเลือกโหมดหรือสกิลทุกครั้ง
+- **[เนตรวาดภาพ (Diagram First)](skills/diagram-first/SKILL.md):** สกิลติดตัว — อธิบายของยากด้วยภาพก่อนเสมอ วาด Mermaid/ASCII ประกอบทุกคำอธิบายที่มีลำดับ ≥3 ขั้น ผู้เล่น ≥2 ฝ่าย เงื่อนไขแตกทาง สถานะเปลี่ยน โครงสร้าง หรือ ก่อน-vs-หลัง โดยไม่ต้องรอผู้ใช้สั่ง (ห้ามวาดกับคำถามตอบเดียวจบ)
 - **[โทรจิตข้ามพรมแดน (Omni-Sync)](skills/omni-sync/SKILL.md):** ทักษะการสร้างและเชื่อมต่อสมองส่วนกลาง (Global Persona) ผ่าน GitHub ช่วยให้แชร์กฎเกณฑ์ คลังทักษะ และความจำข้ามแพลตฟอร์ม (Antigravity & Claude) ได้อย่างสมบูรณ์แบบ พร้อมระบบ Auto-Push เพื่อการวิวัฒนาการร่วมกันอย่างไร้รอยต่อ
 - **[วิถีคาร์พาธี (Karpathy's Discipline)](skills/karpathy-discipline/SKILL.md):** กลืนกินมาจาก Andrej Karpathy ได้รับทักษะการเขียนโค้ดที่เรียบง่าย ตรงไปตรงมา และมีประสิทธิภาพ ข้าจะคอยประยุกต์ใช้แนวทางนี้เสมอเวลาเขียนโค้ด
 - **[วงจรวินิจฉัยบั๊ก (Diagnosing Bugs)](skills/diagnosing-bugs/SKILL.md):** กลืนกินจาก mattpocock/skills กรอบ 6 เฟสสำหรับบั๊กยาก แก่นคือการสร้าง tight feedback loop ที่ red ได้ก่อนเดาสาเหตุ ห้ามเดาก่อนมี loop
