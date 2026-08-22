@@ -81,3 +81,43 @@ description: >
 ### Phase 4: ส่งมอบและรอคำสั่ง
 - เมื่อสร้างเอกสารเสร็จ ให้แจ้งผู้ใช้ให้ทราบ
 - แนะนำผู้ใช้ว่า "หากต้องการให้เริ่มเขียนโค้ดในส่วนใด สามารถสั่ง /goal เพื่อเริ่มกระบวนการพัฒนาตาม Plan ได้เลย"
+
+---
+
+## บทเรียนจากสนามจริง: Supabase + Vercel (KruaCost · 2026-08-22)
+
+### เอา schema ขึ้น Postgres จริงให้เร็วที่สุด อย่าเขียน SQL กองไว้
+SQL 425 บรรทัดที่ "เขียนแล้ว" แต่ไม่เคยรัน = ยังไม่รู้ว่าใช้ได้ไหม · พอ apply จริงมักเจอของที่คิดไม่ถึง เช่น
+**ตั้งใจไม่เปิด insert policy บนตาราง tenant (กันองค์กรลอยไร้เจ้าของ) แล้วลืมเขียน RPC ที่ควรมาแทน = สมัครเข้ามาแล้วสร้างองค์กรไม่ได้เลย**
+→ ทำ RPC `create_org()` แบบ security definer ที่สร้าง org + สมาชิก(owner) + คลัง + ครัว + ตั้งค่าเริ่มต้น **ในทรานแซกชันเดียว**
+
+### เทสต์ RLS ด้วย SQL สวมสิทธิ์ผู้ใช้จริง ไม่ใช่แค่เชื่อว่า policy ถูก
+เขียนไฟล์เดียวรันซ้ำได้ ไม่ทิ้งขยะ — **แตะ schema เมื่อไหร่รันก่อนเสมอ**
+```sql
+perform set_config('request.jwt.claims',
+  json_build_object('sub', uid, 'role','authenticated')::text, true);
+set local role authenticated;
+-- ...ทำงานแทนผู้ใช้...  แล้วสลับเป็นผู้ใช้อีกองค์กร ต้องเห็น 0 แถว
+```
+**เคล็ด:** ตาราง storage ลบแถวตรงๆ ไม่ได้ (`storage.protect_delete()`) ให้ย้อนกลับด้วยการ `raise exception` ท้ายบล็อกแล้วดักไว้เอง
+
+### security advisor มีทั้งที่ต้องแก้และที่ถูกแล้ว
+`SECURITY DEFINER` ที่ `anon` เรียกผ่าน `/rest/v1/rpc/` ได้ = **ต้องแก้** (revoke จาก public/anon)
+แต่ตัวเดียวกันที่ `authenticated` เรียกได้ = **ถูกแล้ว** ถ้า RLS policy เรียกใช้มัน — ถอด execute แล้ว policy ทุกตารางพัง
+
+### Storage: path ต้องขึ้นต้นด้วย tenant id
+`storage.objects` ไม่มีคอลัมน์ org_id ให้เกาะ → บังคับ path เป็น `<org_id>/…/<ไฟล์>` แล้ว policy อ่านโฟลเดอร์ชั้นแรกตัวเดียว
+**เทียบเป็น text ห้าม cast เป็น uuid** ไม่งั้น path มั่วทำให้ทั้ง query error แทนที่จะแค่ถูกปฏิเสธ
+
+### Deploy Vercel — เช็กลิสต์ที่ลืมแล้วเจ็บ
+1. **region ของฟังก์ชันต้องอยู่เมืองเดียวกับฐานข้อมูล** — ค่าเริ่มต้นคือ `iad1` (สหรัฐฯ) ถ้า DB อยู่สิงคโปร์ ทุก query วิ่งข้ามแปซิฟิก
+   ⚠️ **`export const preferredRegion` ในโค้ดอย่างเดียวไม่พอบนแพลน Hobby** ค่าที่ระดับโปรเจกต์ชนะ
+   ต้องกด **Settings > Functions > Function Region** แล้ว **redeploy** (deployment เก่าไม่เปลี่ยนย้อนหลัง) · ยืนยันจาก header `x-vercel-id: sin1::…`
+2. **env `NEXT_PUBLIC_*` ถูกฝังตอน build** ใส่ก่อน deploy ครั้งแรก ไม่งั้นต้อง redeploy
+3. **Supabase > Auth > URL Configuration ต้องเพิ่มโดเมน production** (`Site URL` + `Redirect URLs` แบบ `https://…/**`) ไม่งั้นล็อกอินเด้งกลับ localhost
+4. **ฝั่ง Google ไม่ต้องแก้** — callback ชี้ที่ Supabase ไม่ใช่โดเมนแอป
+5. หน้า dynamic (อ่านคุกกี้) **prefetch ไม่ได้ถ้าไม่มี `loading.tsx`** — ใส่แล้วได้ทั้ง prefetch และโครงหน้าโผล่ทันทีตอนกด
+
+### ของที่เตรียมช่องไว้ใน schema ต้องมีหน้าจอด้วย ไม่งั้นลืม
+`billing_type / tax_id / legal_name / branch_code` เขียนไว้ตั้งแต่ migration แรกแต่ไม่มีหน้าจอ = ผู้ใช้ถามหาแล้วเพิ่งรู้ตัว
+**แต่ไม่ต้องบังคับกรอกตั้งแต่วันแรก** — แยกกล่อง "ใช้ตอนออกใบกำกับ ยังไม่เปิดขายจึงยังไม่ต้องใส่"
