@@ -15,6 +15,21 @@
 - **ห้าม** embed เนื้อหาสกิลใน CLAUDE.md นี้ ให้อ่านจากไฟล์ต้นทางเสมอ
 - **ศูนย์เอกสารที่เดียว (บังคับทุก session ทุก workspace)** — เอกสารทุกชิ้นที่ข้าสร้างให้ท่าน (plan, worklog, analysis, report, หมายเหตุ ฯลฯ) ต้องเก็บใน `0_public_eco_doc_claude/` ที่รากของ workspace เสมอ **ห้ามวางกระจัดกระจาย** (เช่น `docs/` หรือรากโปรเจกต์). แนะนำ subfolder: `docs/` (เอกสารทั่วไป) · `handoff/` (ส่งไม้ต่อ). ถ้าโฟลเดอร์ยังไม่มีให้สร้าง — Antigravity ใช้ `0_public_eco_doc_antigravity/` แยกกันชน
 
+## งานการตลาด (บังคับ ทุกครั้งที่งานแตะ marketing)
+
+**ทุกครั้ง** ที่งานมีส่วนเกี่ยวกับการตลาดไม่ว่าเล็กหรือใหญ่ — เขียน copy หน้าเว็บ · หัวข้อ/CTA · ตั้งราคา/แพ็กเกจ · อีเมล/SMS · SEO · โฆษณา · onboarding/signup/paywall · churn · referral · launch · PR · social · วิเคราะห์คู่แข่ง · วัดผล/analytics/attribution — **ต้องหยิบสกิลจากชุด `marketing-skills` (plugin `marketingskills` ของ Corey Haines, 50 สกิล) มาใช้ก่อนเสมอ ห้ามเขียนจากความรู้ทั่วไปเอง**
+
+ทางเข้าเวลาไม่รู้จะเริ่มตัวไหน:
+- ไม่รู้จะทำการตลาดยังไง / ขอไอเดีย → `marketing-ideas`
+- ต้องการแผนเต็ม (AARRR, GTM, 90 วัน) → `marketing-plan`
+- อยากได้หลายมุมจากนักการตลาดระดับตำนาน → `marketing-council`
+- รู้ช่องทางแล้ว → เข้าสกิลนั้นตรงๆ (`copywriting` `cro` `ads` `emails` `pricing` `seo-audit` `ai-seo` `cold-email` `offers` `onboarding` `churn-prevention` ฯลฯ)
+
+กฎประกอบ:
+- งานหน้าเว็บที่มีทั้ง**ดีไซน์**และ**คำ**: `landing-page-craft`/`gridgeist`/`hallmark` คุมโครงและภาพ · `marketing-skills` คุมคำและ conversion · `reactbits-craft` คุมชั้น motion — ใช้ร่วมกัน อย่าให้ตัวใดตัวหนึ่งกินงานของอีกตัว
+- สกิลชุดนี้เป็นของภายนอก (MIT, upstream `coreyhaines31/marketingskills`) **ห้าม vendor เข้ามาใน repo นี้** อัปเดตด้วย `claude plugin update marketing-skills@marketingskills`
+- ถ้าปิดปลั๊กอินนี้เมื่อไหร่ ให้บอกท่านตรงๆ ว่ากฎข้อนี้ใช้ไม่ได้แล้ว อย่าแกล้งทำเป็นมี
+
 ## ลำดับงาน git ของงานบริษัท (บังคับ ทุกงาน ทุก session ทุก workspace)
 
 1. **ข้าตั้งชื่อ issue ให้ก่อนลงมือ** — เสนอเองโดยไม่ต้องรอถูกขอ ท่านเอาไปสร้าง issue + branch บน GitLab แล้วสลับ branch มาให้
