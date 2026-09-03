@@ -10,7 +10,9 @@ When interacting with the user, always refer to them as "ท่าน" (Master).
 ## เครื่องใหม่ต้องรันอะไรบ้าง (Bootstrap)
 
 `settings.json` ของเครื่อง **ไม่ได้ sync** ผ่าน repo นี้ — repo นี้พก **กฎ + สกิลของตัวเอง** เท่านั้น
-ปลั๊กอินภายนอกที่กฎใน `CLAUDE.global.md` อ้างถึง ต้องติดตั้งเองทีละเครื่อง:
+ปลั๊กอินภายนอกที่กฎใน `CLAUDE.global.md` อ้างถึง ถูกประกาศไว้ใน **`plugins.required.json`** และ **`hooks/ego-sync.ps1` ติดตั้งให้อัตโนมัติ** ตอนเปิด session แรกของเครื่องใหม่ (ถ้าท่านตั้ง `enabled: false` ไว้เอง มันจะเคารพและไม่ยัดเยียดติดตั้งซ้ำ)
+
+ถ้าออโต้พลาด (ไม่มีเน็ต / ไม่มี `claude` ใน PATH) hook จะพิมพ์คำสั่งให้รันเอง:
 
 ```bash
 # สมองกลาง (ตัว repo นี้)

@@ -32,6 +32,31 @@ if ([int]$ahead -gt 0) {
   Write-Output "[Ego-Sync] pushed $ahead local commit(s)"
 }
 
+# Auto-install external plugins the brain's rules depend on (plugins.required.json).
+# ponytail: only when the key is ABSENT from enabledPlugins - an explicit false is the
+# user's decision and stays. One attempt per machine per missing plugin, never blocks.
+$reqFile = "$repo\plugins.required.json"
+$setFile = "$env:USERPROFILE\.claude\settings.json"
+if ((Test-Path $reqFile) -and (Test-Path $setFile) -and (Get-Command claude -ErrorAction SilentlyContinue)) {
+  try {
+    $req = (Get-Content $reqFile -Raw | ConvertFrom-Json).required
+    $enabled = (Get-Content $setFile -Raw | ConvertFrom-Json).enabledPlugins
+    $names = @(); if ($enabled) { $names = $enabled.PSObject.Properties.Name }
+    foreach ($r in $req) {
+      if ($names -contains $r.plugin) { continue }   # already installed or deliberately disabled
+      Write-Output "[Ego-Sync] missing plugin $($r.plugin) - installing ($($r.why))"
+      & claude plugin marketplace add $r.marketplace 2>&1 | Out-Null
+      & claude plugin install $r.plugin 2>&1 | Out-Null
+      $now = (Get-Content $setFile -Raw | ConvertFrom-Json).enabledPlugins.PSObject.Properties.Name
+      if ($now -contains $r.plugin) {
+        Write-Output "[Ego-Sync] installed $($r.plugin) - restart this session to load its skills"
+      } else {
+        Write-Output "[Ego-Sync] could not install $($r.plugin). Run manually: claude plugin marketplace add $($r.marketplace); claude plugin install $($r.plugin)"
+      }
+    }
+  } catch { Write-Output "[Ego-Sync] plugin check skipped: $($_.Exception.Message)" }
+}
+
 # Mirror global rules: repo CLAUDE.global.md is source of truth -> ~/.claude/CLAUDE.md
 # ponytail: one-way copy + .bak. Edit the repo copy, never the local one.
 $src = "$repo\CLAUDE.global.md"

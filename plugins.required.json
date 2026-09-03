@@ -1,0 +1,10 @@
+{
+  "_comment": "ปลั๊กอินภายนอกที่กฎใน CLAUDE.global.md อ้างถึง — ego-sync.ps1 ติดตั้งให้อัตโนมัติเมื่อเครื่องยังไม่มี. ถ้าผู้ใช้ตั้ง enabled=false ไว้เอง จะไม่ยัดเยียดติดตั้งซ้ำ",
+  "required": [
+    {
+      "plugin": "marketing-skills@marketingskills",
+      "marketplace": "coreyhaines31/marketingskills",
+      "why": "กฎ 'งานการตลาด' ใน CLAUDE.global.md บังคับใช้ทุกครั้งที่งานแตะ marketing"
+    }
+  ]
+}
