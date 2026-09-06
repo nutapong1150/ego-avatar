@@ -1,3 +1,13 @@
+## 2026-09-06 · พัฒนาส่วนขยาย TSub Chrome Extension เสร็จสมบูรณ์พร้อมใช้งาน (Goal Complete)
+- module: Full Chrome Extension Development
+- status: done
+- files: d:/claude code/app16-TSub/src/components/TabSubtitles.tsx, src/components/TabExport.tsx, src/core/gemini.ts, src/core/audioExtractor.ts, src/core/canvasSubtitleRenderer.ts, src/core/videoRenderer.ts, src/core/srtGenerator.ts, src/content.ts, 0_public_eco_doc_antigravity/docs/tsub-user-manual.md
+- problem: พัฒนาและเร่งสปีดระบบ TSub ให้จบพร้อมใช้งานจริงทุกฟังก์ชัน (ตัดเงียบ, STT คำต่อคำ, แต่งซับ Kinetic Bounce, เรนเดอร์ Hardsub MP4, โพสต์ TikTok)
+- solution: สร้างระบบแปลง 16kHz WAV และต่อ Gemini 2.5 Flash STT, พัฒนาตัวเล่น Live Kinetic Subtitle Canvas Overlay, ระบบเรนเดอร์ Hardsub WebCodecs ใน Offscreen Document, ปุ่มดาวน์โหลด MP4/SRT, และ Content Script สำหรับ TikTok
+- result: ผ่านการทดสอบ Type check และคอมไพล์ Plasmo 100% ได้ build/chrome-mv3-prod พร้อมโหลดขึ้น Chrome ทันที
+- priority: P1
+- days: 1
+
 ## 2026-09-06 · ระบบตัดช่วงเงียบวิดีโออัตโนมัติ TSub (Slice 2)
 - module: Chrome Extension & Audio Engine
 - status: done
