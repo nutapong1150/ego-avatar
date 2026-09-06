@@ -1,3 +1,13 @@
+## 2026-09-06 · ติดตั้งโครงสร้างหลัก TSub Chrome Extension (Slice 1)
+- module: Chrome Extension & Video Processing
+- status: done
+- files: d:/claude code/app16-TSub/package.json, src/sidepanel.tsx, src/background.ts, src/tabs/offscreen.tsx, src/core/storage.ts, src/store/useAppStore.ts
+- problem: วางรากฐานและโครงสร้างโปรเจกต์ Chrome Extension MV3 สำหรับระบบตัดต่อวิดีโอและทำซับไตเติล TSub
+- solution: ติดตั้ง Plasmo + Tailwind + Zustand + idb-keyval + mp4-muxer + @google/genai, ออกแบบ Sidepanel สไตล์ Tigr UI 60-30-10, สร้าง Offscreen Document Bridge และระบบแคช IndexedDB Zero-Server
+- result: คอมไพล์โปรเจกต์ผ่าน 100% ได้ build/chrome-mv3-prod พร้อมใช้งาน
+- priority: P1
+- days: 1
+
 ## 2026-09-06 · ซิงค์และอัปเดตสกิล Ego Avatar สู่ Antigravity
 - module: Knowledge Sync & Skill Management
 - status: done
