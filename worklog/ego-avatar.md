@@ -1,3 +1,13 @@
+## 2026-09-06 · อัปเกรดโมเดล STT สู่ Gemini 3.6 Flash ใน TSub
+- module: AI Engine & Model Migration
+- status: done
+- files: d:/claude code/app16-TSub/src/core/gemini.ts, src/components/TabSettings.tsx, src/components/TabSubtitles.tsx, src/store/useAppStore.ts, src/types/index.ts
+- problem: โมเดล gemini-2.5-flash ถูก deprecate และปิดรับผู้ใช้ใหม่ แนะนำให้อัปเกรดเป็น models/gemini-3.6-flash
+- solution: อัปเกรดเอนด์พอยต์และพารามิเตอร์โมเดลเริ่มต้นเป็น gemini-3.6-flash พร้อมเพิ่มตัวเลือกสลับโมเดลในแท็บตั้งค่าและบันทึกลง chrome.storage.local
+- result: คอมไพล์ผ่าน 100% พร้อมใช้งานโมเดล Gemini 3.6 Flash ล่าสุด
+- priority: P1
+- days: 1
+
 ## 2026-09-06 · พัฒนาส่วนขยาย TSub Chrome Extension เสร็จสมบูรณ์พร้อมใช้งาน (Goal Complete)
 - module: Full Chrome Extension Development
 - status: done
