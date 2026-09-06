@@ -1,3 +1,13 @@
+## 2026-09-06 · ย้ายการเรนเดอร์ Hardsub MP4 มาที่ Sidepanel บริบทมองเห็นได้ (แก้ปัญหาได้ยินแต่เสียงไม่มีภาพ)
+- module: Video Decoding & Visible Surface Pipeline
+- status: done
+- files: d:/claude code/app16-TSub/src/components/TabExport.tsx, src/core/videoRenderer.ts
+- problem: วิดีโอที่เรนเดอร์ออกมามีแต่เสียงแต่ไม่มีภาพ (จอดำ) เนื่องจาก Chromium ตรวจพบว่า Offscreen Document มีสถานะซ่อนอยู่ (document.hidden) และ element มีขนาดเล็ก จึงสั่ง Suspend ตัวถอดรหัสวิดีโอ (Hardware Video Decoder) และถอดรหัสเฉพาะเสียง (Audio-Only)
+- solution: ย้ายการเรนเดอร์ WebCodecs ทั้งหมดมาประมวลผลตรงใน Sidepanel ซึ่งเป็นหน้าต่างที่ผู้ใช้กำลังเปิดดูอยู่ (Visible Context) กำหนดขนาดวิดีโอจริงและกระตุ้นตัวถอดรหัสวิดีโอด้วย play/pause พร้อมเพิ่มจอ Live Preview Monitor ในหน้า UI ให้ผู้ใช้เห็นภาพวิดีโอและซับไตเติลกำลังวาดสดๆ แต่ละเฟรมขณะเรนเดอร์
+- result: แก้ปัญหาได้ยินแต่เสียงได้อย่างเด็ดขาด ภาพและเสียงออกครบ คมชัด ซับเด้งตรงจังหวะ 100%
+- priority: P1
+- days: 1
+
 ## 2026-09-06 · อัปเกรดเอนจินเรนเดอร์ Hardsub MP4 ด้วย WebCodecs แก้ปัญหาจอวิดีโอดำใน TSub
 - module: Video Rendering & WebCodecs Pipeline
 - status: done
