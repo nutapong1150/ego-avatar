@@ -1,3 +1,13 @@
+## 2026-09-06 · ซิงค์และอัปเดตสกิล Ego Avatar สู่ Antigravity
+- module: Knowledge Sync & Skill Management
+- status: done
+- files: C:/Users/nutap/.gemini/config/skills/
+- problem: ผู้ใช้ต้องการอัปเดตสกิลทั้งหมดจาก Ego Avatar ลงมายังระบบเครื่อง
+- solution: ทำการ pull origin main ใน repo ego-avatar จากนั้น sync คลังทักษะทั้งหมด 47 สกิลลงสู่ C:/Users/nutap/.gemini/config/skills และตรวจสอบความสมบูรณ์ของ SKILL.md ทุกตัว
+- result: อัปเดตและติดตั้งสกิล 47 สกิลเข้าสู่ระบบ Antigravity พร้อมใช้งานครบถ้วน
+- priority: P1
+- days: 1
+
 ## 2026-08-28 · จัดทำ Handoff Blueprint สำหรับระบบ Video Automation
 - module: Research & Workflow Extraction
 - status: done
