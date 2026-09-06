@@ -1,3 +1,13 @@
+## 2026-09-06 · เผยแพร่โค้ด TSub Chrome Extension ขึ้น GitHub Main Repo
+- module: Version Control & GitHub Repository Release
+- status: done
+- files: d:/claude code/app16-TSub/README.md, .gitignore, src/*, 0_public_eco_doc_antigravity/*
+- problem: ผู้ใช้ต้องการนำซอร์สโค้ดและเอกสารโปรเจกต์ TSub ทั้งหมดขึ้น GitHub Repository หลักที่ https://github.com/nutapong1150/tsub บน branch main
+- solution: ตั้งค่า .gitignore กรอง node_modules/build/.plasmo, เขียนเอกสาร README.md อธิบายสถาปัตยกรรมและวิธีติดตั้งอย่างครบถ้วน, ทำการ git init, เชื่อมต่อ remote origin, สร้าง commit แรก และ push ขึ้น main สำเร็จ 100%
+- result: โค้ดทั้งหมด 33 ไฟล์ถูกเผยแพร่บน https://github.com/nutapong1150/tsub.git พร้อมใช้งาน
+- priority: P1
+- days: 1
+
 ## 2026-09-06 · ย้ายการเรนเดอร์ Hardsub MP4 มาที่ Sidepanel บริบทมองเห็นได้ (แก้ปัญหาได้ยินแต่เสียงไม่มีภาพ)
 - module: Video Decoding & Visible Surface Pipeline
 - status: done
