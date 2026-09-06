@@ -1,3 +1,13 @@
+## 2026-09-06 · ระบบตัดช่วงเงียบวิดีโออัตโนมัติ TSub (Slice 2)
+- module: Chrome Extension & Audio Engine
+- status: done
+- files: d:/claude code/app16-TSub/src/core/silenceDetector.ts, src/tabs/offscreen.tsx, src/components/TabSilence.tsx, src/types/index.ts
+- problem: ต้องการอัลกอริทึมตรวจจับและตัดช่วงเดดแอร์ในวิดีโอแบบเรียลไทม์ พร้อมตัวเล่นพรีวิวแบบไม่เสียเวลาเรนเดอร์ใหม่
+- solution: พัฒนาระบบคำนวณ Audio RMS/dB ใน Offscreen Document พร้อม Padding กันเสียงหลุด, ทำ Visual Timeline แถบสีเขียว/แดง และฟังก์ชันข้ามช่วงเงียบอัตโนมัติ (Live Non-destructive Seek) ใน Sidepanel
+- result: วิเคราะห์ช่วงเงียบและแสดงผลสถิติเวลาที่ประหยัดได้ พร้อมเล่นพรีวิวข้ามช่วงเงียบได้ทันที คอมไพล์ผ่าน 100%
+- priority: P1
+- days: 1
+
 ## 2026-09-06 · ติดตั้งโครงสร้างหลัก TSub Chrome Extension (Slice 1)
 - module: Chrome Extension & Video Processing
 - status: done
