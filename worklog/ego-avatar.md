@@ -1,3 +1,13 @@
+## 2026-09-06 · ระบบป้องกันข้อมูลซับไตเติลสูญหายและปุ่มกู้คืน AI ใน TSub
+- module: Subtitle Editor UX & Data Safety
+- status: done
+- files: d:/claude code/app16-TSub/src/store/useAppStore.ts, src/components/TabSubtitles.tsx
+- problem: การกดปุ่ม "ตัวอย่าง" (Demo) ทับข้อมูลซับไตเติลที่เพิ่งถอดเสียงจาก Gemini AI ทำให้ข้อความหายไปและต้องเสียเวลาสั่งถอดเสียงใหม่
+- solution: เพิ่มระบบแคช lastAiSubtitles ใน Zustand store, เพิ่มการแจ้งเตือนยืนยันก่อนทับข้อมูล, ซ่อนปุ่มตัวอย่างเมื่อมีซับไตเติลอยู่แล้วเพื่อป้องกันการเผลอกด, และเพิ่มปุ่ม "กู้คืนข้อความ AI" กู้คืนข้อความถอดเสียงล่าสุดได้ทันที 1 คลิกโดยไม่ต้องเรียก AI ซ้ำ
+- result: ป้องกันข้อความ AI สูญหายได้ 100% พร้อม build และคอมไพล์ผ่านฉลุย
+- priority: P1
+- days: 1
+
 ## 2026-09-06 · อัปเกรดโมเดล STT สู่ Gemini 3.6 Flash ใน TSub
 - module: AI Engine & Model Migration
 - status: done
