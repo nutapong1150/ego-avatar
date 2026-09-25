@@ -127,3 +127,13 @@
 - result: ได้ไฟล์เอกสารวิเคราะห์ครบถ้วนพร้อมใช้งาน
 - priority: P1
 - days: 1
+
+## 2026-09-25 · สกิลใหม่ ศิลป์วาดด้วยโค้ด (creative-coding-social)
+- module: skills/creative-coding-social
+- status: done
+- files: skills/creative-coding-social/SKILL.md · EGO_AVATAR.md
+- problem: ท่านอยากทำภาพ info โปรโมทด้วย creative coding (ภาพเกิดจากโค้ดล้วน แก้ได้ทุกจุด) และเก็บเป็นสกิลใช้ซ้ำ
+- solution: สกัดวิธีจากงานจริงโพสต์ 10 LINK Files (app14-Presentia) — DOM บน brand token + Canvas seeded · เทคนิค flow field / bezier / ไอคอนวาดเอง · กับดัก 6 ข้อ · คำสั่งเรนเดอร์ headless Chrome
+- result: ภาพโพสต์ขึ้นเพจ LINK Files จริงผ่าน Presentia · สกิลพร้อมใช้ทุกเครื่อง
+- priority: P2
+- days: 1
