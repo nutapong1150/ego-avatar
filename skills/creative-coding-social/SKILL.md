@@ -18,7 +18,7 @@ description: Use when making a social/marketing image (FB/IG post, info graphic,
    PNG ขนาดจริง → ดูภาพ → แก้ → เรนเดอร์ซ้ำ
 ```
 
-ต่อยอดเป็นวิดีโอ (kinetic typography · Web Audio · programmatic video) → ใช้ชุดสกิล `hyperframes*` แทน สกิลนี้คุมภาพนิ่ง
+ต่อยอดเป็นวิดีโอ (ตัวหนังสือ/ภาพขยับ + SFX + เพลงพื้น) → สกิล `creative-coding-video` (render(t) + render-video.mjs) · สกิลนี้คุมภาพนิ่ง
 
 ## ขั้นตอน
 
