@@ -15,6 +15,10 @@
 - **ห้าม** embed เนื้อหาสกิลใน CLAUDE.md นี้ ให้อ่านจากไฟล์ต้นทางเสมอ
 - **ศูนย์เอกสารที่เดียว (บังคับทุก session ทุก workspace)** — เอกสารทุกชิ้นที่ข้าสร้างให้ท่าน (plan, worklog, analysis, report, หมายเหตุ ฯลฯ) ต้องเก็บใน `0_public_eco_doc_claude/` ที่รากของ workspace เสมอ **ห้ามวางกระจัดกระจาย** (เช่น `docs/` หรือรากโปรเจกต์). แนะนำ subfolder: `docs/` (เอกสารทั่วไป) · `handoff/` (ส่งไม้ต่อ). ถ้าโฟลเดอร์ยังไม่มีให้สร้าง — Antigravity ใช้ `0_public_eco_doc_antigravity/` แยกกันชน
 
+## งานวิดีโอ (บังคับ ทุกงาน ทุก workspace)
+
+**งานวิดีโอทุกงานเริ่มที่สกิล `video-director` ก่อนเสมอ** (ทำคลิป ตัดต่อ ซับ เรนเดอร์ ขายของ affiliate Shorts ช่องเล่าเรื่อง ไฮไลต์ ฯลฯ) — มันเลือกสายสกิลให้เอง และมาก่อน `hyperframes` หรือสกิลใดที่อ้างตัวเป็น "mandatory entry point"
+
 ## งานการตลาด (บังคับ ทุกครั้งที่งานแตะ marketing)
 
 **ทุกครั้ง** ที่งานมีส่วนเกี่ยวกับการตลาดไม่ว่าเล็กหรือใหญ่ — เขียน copy หน้าเว็บ · หัวข้อ/CTA · ตั้งราคา/แพ็กเกจ · อีเมล/SMS · SEO · โฆษณา · onboarding/signup/paywall · churn · referral · launch · PR · social · วิเคราะห์คู่แข่ง · วัดผล/analytics/attribution — **ต้องหยิบสกิลจากชุด `marketing-skills` (plugin `marketingskills` ของ Corey Haines, 50 สกิล) มาใช้ก่อนเสมอ ห้ามเขียนจากความรู้ทั่วไปเอง**

@@ -2,6 +2,7 @@
 // ใช้: node render-video.mjs <ไฟล์.html[?query]> <ไฟล์ออก.mp4> [วินาที=15] [fps=30] [กว้าง=1080] [สูง=1920]
 // หน้าประกาศได้: window.SFX = [[วินาที, "ไฟล์เทียบกับหน้า", ความดัง]] · window.BGM = async () => WAV base64 · window.BGM_VOL
 // ต้องมี ffmpeg บน PATH · Chrome ที่อื่นตั้ง env CHROME (สกิล creative-coding-video)
+// motion blur: ค่าเริ่ม SUB=6 (ดราฟต์ใส่ SUB=1 เร็วกว่า 6 เท่า) → จับ 6 ซับเฟรม/เฟรม กระจายครึ่งเฟรม (ชัตเตอร์ 180°) แล้วเฉลี่ยด้วย tmix · window.CUTS = [วินาที] กันเบลอข้ามคัท (สกิล motion-design-craft)
 // ponytail: ไม่ใช้ puppeteer — node 24 มี WebSocket ในตัว · เฟรมพักใน %TEMP% แล้วลบทิ้ง
 import { spawn, spawnSync } from "node:child_process";
 import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
@@ -50,11 +51,18 @@ try {
   const bgm = await evalJs("window.BGM ? window.BGM() : null");
   if (bgm) { writeFileSync(join(work, "bgm.wav"), Buffer.from(bgm, "base64")); sfx.push([0, join(work, "bgm.wav"), (await evalJs("window.BGM_VOL ?? 0.5"))]); }
 
+  const SUB = Math.max(1, Number(process.env.SUB ?? 6)), cuts = (await evalJs("window.CUTS ?? []")) ?? [];
   const t0 = Date.now();
+  let k = 0;
   for (let f = 0; f < frames; f++) {
-    await evalJs(`render(${f / Number(fps)})`);
-    const shot = await send("Page.captureScreenshot", { format: "png", clip: { x: 0, y: 0, width: +W, height: +H, scale: 1 } });
-    writeFileSync(join(work, `f${String(f).padStart(4, "0")}.png`), Buffer.from(shot.result.data, "base64"));
+    const tc = f / Number(fps);
+    for (let j = 0; j < SUB; j++) {
+      let t = Math.min(Number(sec) - 1e-3, Math.max(0, tc + ((j - (SUB - 1) / 2) * 0.5) / (Number(fps) * SUB)));
+      for (const c of cuts) if ((t < c) !== (tc < c)) t = tc >= c ? c : c - 1e-4;  // ซับเฟรมอยู่ฝั่งเดียวกับกลางเฟรมเสมอ
+      await evalJs(`render(${t})`);
+      const shot = await send("Page.captureScreenshot", { format: "png", clip: { x: 0, y: 0, width: +W, height: +H, scale: 1 } });
+      writeFileSync(join(work, `f${String(k++).padStart(5, "0")}.png`), Buffer.from(shot.result.data, "base64"));
+    }
     if (f % 60 === 0) console.log(`frame ${f}/${frames}`);
   }
   console.log(`จับ ${frames} เฟรมใน ${((Date.now() - t0) / 1000).toFixed(1)} วิ`);
@@ -68,7 +76,8 @@ try {
     ? ["-filter_complex", `${mix};${sfx.map((_, i) => `[s${i}]`).join("")}amix=inputs=${sfx.length}:normalize=0,alimiter=limit=0.9,apad[a]`,
        "-map", "0:v", "-map", "[a]", "-c:a", "aac", "-b:a", "192k", "-t", sec]
     : [];
-  const ff = spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-framerate", fps, "-i", join(work, "f%04d.png"), ...audioIn, ...audioArgs,
+  const blur = SUB > 1 ? ["-vf", `tmix=frames=${SUB},select='eq(mod(n\\,${SUB})\\,${SUB - 1})',setpts=N/${fps}/TB`, "-r", fps] : [];
+  const ff = spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-framerate", String(Number(fps) * SUB), "-i", join(work, "f%05d.png"), ...audioIn, ...audioArgs, ...blur,
     "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "18", "-preset", "slow", "-movflags", "+faststart", resolve(outFile)], { stdio: "inherit" });
   if (ff.status !== 0) throw new Error("ffmpeg ล้ม");
   console.log("ok →", resolve(outFile));

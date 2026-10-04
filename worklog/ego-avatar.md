@@ -1,3 +1,23 @@
+## 2026-10-04 · เทียบ A/B/C → ตั้ง C เป็นทางหลัก + แก้ 3 จุด + remake/มีม/หน้าคน AI
+- module: Skills
+- status: done
+- files: skills/motion-design-craft/{SKILL.md, motion.js, motion-qa.mjs, remake-memes-faces.md}, skills/creative-coding-video/{render-video.mjs, SKILL.md}, EGO_AVATAR.md
+- problem: ต้องตัดสินว่าจะใช้สกิลไหน · คลิป C มีปัญหา 3 จุด (สระบนไทยลอยในหน้ากาก · ตัวเล็กไปสำหรับมือถือ · หัวข้อโดนกล้องตัด)
+- solution: ตัดคลิปเทียบ 20 วิ 3 แบบ บทเดียวกัน → ท่านเลือก C (ใช้สองสกิลคู่กัน) · M.words เลื่อน 160% · พาดหัว ≥112px · หัวข้อออกก่อนกล้องพุ่ง · SUB=6 เป็นค่าเริ่ม · motion-qa เพิ่มโหมด peaks · พอร์ต remake เป็น ffmpeg (ทดสอบ split-screen แล้ว) + คู่มือมีม yt-dlp + หน้าคน AI พร้อมกฎความเสี่ยง
+- result: C2 demo (videos/skill-compare/C2-combined.html) · ไฟล์ผลเทียบ app10-gen-video/0_public_eco_doc_claude/docs/skill-compare-motion-2026-10-04.md
+- priority: P2
+- days: 1
+
+## 2026-10-04 · สกิลใหม่ motion-design-craft (ดัดแปลงจาก howseen-ai/claude-motion-design)
+- module: Skills
+- status: done
+- files: skills/motion-design-craft/{SKILL.md, motion.js, motion-qa.mjs}, skills/creative-coding-video/{render-video.mjs, SKILL.md}, EGO_AVATAR.md
+- problem: ท่านอยากได้สกิล motion design จาก repo ภายนอก ต้องตรวจความปลอดภัยก่อน
+- solution: อ่านครบทุกไฟล์ (ไม่มี exec/eval/โค้ดอำพราง/unicode ซ่อน/prompt injection · เน็ตยิงแค่ mixkit/svgl/jsdelivr/gstatic/21st.dev) · เอาเฉพาะกฎการเคลื่อนไหว+QA มาทำเป็นชั้นบนของ creative-coding-video · port ตัวตรวจ pop/flash/loop เป็น Node · เพิ่ม SUB motion blur ให้ render-video.mjs (ค่าเริ่ม 1 = เหมือนเดิม) · ไม่รับ remake mode/yt_dlp/Python stack
+- result: ทดสอบเรนเดอร์จริง SUB=4 + SFX + CUTS ได้ 60 เฟรม มีเสียง เบลอขึ้นตอนเคลื่อน · motion-qa จับ pop ตรงคัท t=1.000 พอดี
+- priority: P2
+- days: 1
+
 ## 2026-09-06 · เผยแพร่โค้ด TSub Chrome Extension ขึ้น GitHub Main Repo
 - module: Version Control & GitHub Repository Release
 - status: done
