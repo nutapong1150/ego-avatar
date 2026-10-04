@@ -42,6 +42,8 @@ description: Single entry point for ANY video job — make, edit, cut, caption, 
 | **แก้โปรเจกต์ HyperFrames ที่มีอยู่** | `hyperframes` |
 | ไม่ตรงแถวไหน | ไม่มีฟุตเทจ → ทาง C · มีฟุตเทจ → `video-use` · หลายฉากยาว → `general-video` |
 
+**สูตรรูปแบบคลิป** (ปักตะกร้า · รีวิว · UGC · ไต่ระดับราคา · VS · สปอยเป็นตอน · สารคดี · ตัดแปะ) + ระบบร่วม (ป้ายหัวค้าง · HUD · ซับคำเด่น · CTA ชี้ตะกร้า · safe zone) → `formats.md` · เลือกสูตรก่อนเขียน storyboard ทุกงานขายของ/ช่อง
+
 **ตัวช่วยที่หยิบใช้ได้ทุกสาย:** เสียงเพลง/SFX/ภาพ/ไอคอน = `media-use` · ถอดเสียงไม่มี key ElevenLabs = `video-transcribe` · ภาพปก/ภาพโพสต์ = `creative-coding-social` · โพสต์/แคปชันขาย = `marketing-skills:social`
 
 **ทาง C หรือ HyperFrames?** ภาพที่ **วาดด้วยโค้ด** (ตัวหนังสือ รูปทรง UI สมมติ) → ทาง C (ไม่ต้องลงอะไร คุมทุกเฟรม ตัวไทยผ่านการทดสอบแล้ว) · ภาพที่ **มาจากไฟล์** (ฟุตเทจ ภาพนิ่งหลายใบ เสียงพากย์ยาว ซับจากเสียงพูด) → HyperFrames/`video-use`

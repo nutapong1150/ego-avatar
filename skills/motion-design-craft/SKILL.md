@@ -35,6 +35,14 @@ description: Use when a code-drawn video (render(t) / creative-coding-video) nee
 ## 1. Brief ก่อนโค้ด (หยุดรอ OK)
 ความยาว · format หลัก (9:16 Shorts / 1:1 / 4:5 LinkedIn) · หัวเรื่อง + คำสัญญา 1 ประโยค · **สไตล์อ้างอิงที่มีชื่อ** ("Linear launch", "Apple bumper", "Stripe docs" ห้ามใช้คำกว้างอย่าง "premium modern") · **states มีเวลา** (hook 0–2.5 วิ → รูปทรงกลายเป็นจอ 1 → แปลงเป็นจอ 2 → หลักฐานตัวเลขจริง → โลโก้+URL) · layer list · แผนเสียง (เงียบ / SFX โค้ด / เพลง) · มีไฟล์ `facts.md` (ตัวเลข+ที่มา) ไม่มี = ไม่มีตัวเลขบนจอ
 
+## 1b. Storyboard + ข้อมูลฉาก (จาก skill360 "Paper Cut Motion" 2026-10-04)
+- **คลิป 30–45 วิ = 4–7 ฉาก ฉากละ 5–8 วิ · 1 ฉาก 1 ใจความ** · ข้อความบนจอ ≤ 2 บรรทัด อ่านจบใน 2–3 วิ
+- ตาราง storyboard 7 ช่อง (ส่งท่านก่อนเขียนโค้ด): `เวลา | ข้อความบนจอ | ภาพเปรียบเทียบ (visual metaphor) | องค์ประกอบ | ท่าเคลื่อนไหว | เสียงคู่ท่า | วิธีเปลี่ยนฉาก`
+- **ข้อมูลแยกจาก logic:** บนสุดของ `<script>` มี `CONFIG` (สี ฟอนต์ BPM) + `SCENES = [{ id, start, duration, elements[], text[], sfx[], transition }]` + คอมเมนต์ไทย "แก้ตรงนี้" · `window.SFX` สร้างจาก `SCENES[].sfx` (ห้ามพิมพ์เวลาซ้ำสองที่) · ใน `render(t)` ห้ามมีเลขวินาทีลอยๆ
+- **เสียงเขียนเป็นคู่กับท่า:** กระดาษเลื่อน → เสียงกระดาษถู · แปะลง → เสียงแปะ · พลิก → เสียงพลิก · ข้อความโผล่ → pop เบา · เปลี่ยนฉาก → whoosh
+- **สั่งแก้ทีละจุด:** `ฉากไหน + อะไร + เปลี่ยนเป็นอะไร + ห้ามแตะส่วนไหน` (แก้แค่ SCENES ไม่แตะ logic)
+- กฎ "ต้องวาดลง canvas ไม่งั้น export จอดำ" ในบทความนั้น**ไม่ใช้กับเรา**: กฎนี้มีไว้สำหรับการอัดสดด้วย MediaRecorder แต่ `render-video.mjs` ของเราจับภาพทั้งหน้า DOM ได้ (และตัวไทยใน DOM สวยกว่าใน canvas)
+
 ## 2. กฎกัน "AI motion"
 - **สีเน้น 1 สี** · **ทีละอย่างขยับ** · ระบบรูปทรงเดียวตั้งแต่ต้นจนจบ ใช้การแปลงร่าง ไม่ใช้การตัด
 - สปริงหน่วง ≥ 0.72 เกินเป้านิดเดียว **ห้ามเด้งแบบการ์ตูน** · ห้ามเคลื่อนที่แบบเส้นตรง (linear)
@@ -55,6 +63,7 @@ description: Use when a code-drawn video (render(t) / creative-coding-video) nee
 | วงท่วมจอ | รัศมี `M.floodRadius(x, y, W, H)` ใน ~0.3 วิ แล้วหดเข้าวัตถุถัดไป |
 | ตัวหนังสือโผล่ | บรรทัด `<div class="line" style="overflow:hidden;padding:.2em 0">` ห่อคำด้วย `<span class="w" style="display:inline-block">` แล้ว `M.words(el, t, tin, tout)` (เข้าล่าง ออกบน ห่างคำละ 55 ms) · **ไทย: เลื่อน 160% ในตัวแล้ว** เพราะสระบน/วรรณยุกต์ล้นกล่อง ถ้าเลื่อน 105% จะเห็นเศษสระลอยค้าง · ตัวหนังสือที่ต้องหายตอนคัท ใส่ `visibility` ตามเวลา |
 | shared element | ของชิ้นเดียวพาไปฉากถัดไป (bubble พาคำเข้าวงท่วม, ปุ่มพา label เข้าหน้า) · ข้อความที่สลับในรูปทรงที่กำลังแปลงต้องมีหน้ากากของตัวเอง |
+| **Paper Cut / stop motion** | `M.torn(w, h, seed, rough)` → ขอบฉีก (`.clip` ใส่ CSS `clip-path` · `.path` ใช้กับ canvas) สร้างครั้งเดียว cache · `M.jitter(t, seed, amp)` สั่นที่ 12fps ใส่ rotate/translate เล็กๆ ขณะท่าหลักลื่น 30fps · เงา `filter: drop-shadow(0 6px 4px rgba(0,0,0,.18))` ใต้แต่ละชั้น · ท่า: เลื่อนเข้าข้าง · ตบแปะลง (สปริง d≈22 overshoot นิด) · ตัวอักษรตกทีละตัว · ไอคอนประกอบจากชิ้นกระดาษ · พับ/พลิก · ฉีกเป็น transition · พื้นครีม #F4E9D8 จำกัด 4–5 สี |
 | ไลบรารีอื่น | GSAP `tl.pause(); tl.totalTime(t+0.001,true); tl.totalTime(t,true)` · WAAPI `getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000})` · anime.js `autoplay:false` + `seek` · Lottie `goToAndStop` · **ห้ามของที่เล่นตามนาฬิกาจริง** (Spline, framer-motion live) |
 
 ## 4. เรนเดอร์ + motion blur

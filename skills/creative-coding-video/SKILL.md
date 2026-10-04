@@ -25,7 +25,7 @@ description: Use when making a short promo, explainer, ad or social video (Reels
 2. **Storyboard ในแชต** — ตารางช่วงวินาที · บนจอ · ขยับยังไง · ทำไม → รออนุมัติ · ฉากสุดท้ายค้าง ≥3 วิให้อ่าน/แคปโค้ดทัน
 3. **คัดลอก** `template.html` + `music.js` ไปข้างไฟล์ธีมแบรนด์ (`_base.css`) · SFX คัดจาก `media-use/audio/assets/sfx/` (Pixabay ใช้เชิงพาณิชย์ได้) มาไว้ `sfx/` พร้อม CREDITS
 4. **เขียนฉาก** ด้วย `seg/out/back/rise` · เสียงตั้งเวลาจากตัวแปรเดียวกับภาพ (คำนวณ ไม่พิมพ์เลขซ้ำ)
-5. **ตรวจก่อนเรนเดอร์เต็ม** — screenshot `?t=` ทุกฉาก (กลางฉาก + ก่อน/หลังรอยต่อ) ต่อเป็น contact sheet ด้วย ffmpeg `xstack` แล้ว **เปิดดูจริง**
+5. **ดูในเบราว์เซอร์:** ใส่ `<script src="preview.js" data-dur="20"></script>` ท้ายหน้า แล้วเปิดไฟล์ตรงๆ ได้ Play/ลากเวลา/←→ ทีละเฟรม (ไม่โผล่ตอนเรนเดอร์ เพราะตอนนั้นมี `?t=`) · **ตรวจก่อนเรนเดอร์เต็ม** — screenshot `?t=` ทุกฉาก (กลางฉาก + ก่อน/หลังรอยต่อ) ต่อเป็น contact sheet ด้วย ffmpeg `xstack` แล้ว **เปิดดูจริง**
 6. **เรนเดอร์** `node <skill>/render-video.mjs "page.html?code=X" out.mp4 30` · ใช้ path แบบ `D:/...` ไม่ใช่ `$(pwd)` ของ Git Bash · ค่าเริ่มมี motion blur `SUB=6` (ดราฟต์ใส่ `SUB=1` เร็วกว่า 6 เท่า) + `window.CUTS` · **ทางหลัก: ใช้คู่กับ `motion-design-craft` เสมอ** (สปริง/กล้อง/คำโผล่ไทย/QA)
 7. **วัดเสียง** — `volumedetect` แยกช่วง (เฉลี่ย −15 ถึง −22 dB · สูงสุด ≤ −3 dB) · `silencedetect` เทียบจุดเริ่มเสียงกับคิว (คลาด ≤0.1 วิ) · ส่งไฟล์ให้ท่านฟัง เพราะข้าฟังเองไม่ได้
 

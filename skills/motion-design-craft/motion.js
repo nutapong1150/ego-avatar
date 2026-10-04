@@ -59,5 +59,25 @@
     });
   }
 
-  window.M = { clamp, lerp, E, seg, spring, springTo, camera, floodRadius, rng, wordRise, words };
+  // stop motion: ค่าสั่นเปลี่ยนแค่ fps ครั้ง/วิ (12 = ดูทำมือ) ขณะการเคลื่อนหลักยังลื่น 30fps · ใส่ให้ rotate/translate เล็กๆ
+  const jitter = (t, seed = 1, amp = 1, fps = 12) => (rng(seed * 9973 + Math.floor(t * fps))() * 2 - 1) * amp;
+
+  // ขอบกระดาษฉีก: สร้างครั้งเดียวต่อ seed แล้ว cache (สุ่มใหม่ทุกเฟรม = ขอบสั่นยุบยับ)
+  // คืน { path: Path2D สำหรับ canvas, clip: 'polygon(…)' สำหรับ CSS clip-path ของ DOM }
+  const _torn = new Map();
+  function torn(w, h, seed = 1, rough = 6, step = 18) {
+    const key = [w, h, seed, rough, step].join();
+    if (_torn.has(key)) return _torn.get(key);
+    const r = rng(seed), pts = [];
+    const edge = (x0, y0, x1, y1) => {
+      const n = Math.max(2, Math.round(Math.hypot(x1 - x0, y1 - y0) / step));
+      for (let i = 0; i < n; i++) pts.push([x0 + ((x1 - x0) * i) / n + (r() - 0.5) * rough, y0 + ((y1 - y0) * i) / n + (r() - 0.5) * rough]);
+    };
+    edge(0, 0, w, 0); edge(w, 0, w, h); edge(w, h, 0, h); edge(0, h, 0, 0);
+    const path = new Path2D(); pts.forEach(([x, y], i) => (i ? path.lineTo(x, y) : path.moveTo(x, y))); path.closePath();
+    const clip = `polygon(${pts.map(([x, y]) => `${((x / w) * 100).toFixed(2)}% ${((y / h) * 100).toFixed(2)}%`).join(",")})`;
+    const out = { path, clip }; _torn.set(key, out); return out;
+  }
+
+  window.M = { clamp, lerp, E, seg, spring, springTo, camera, floodRadius, rng, wordRise, words, jitter, torn };
 })();
