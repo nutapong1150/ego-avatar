@@ -1,3 +1,13 @@
+## 2026-10-09 · สกิลใหม่ วาทยกรสถาปนิก (sa-orchestra) + sub-agent sa-developer / sa-tester
+- module: Skills (engineering orchestration)
+- status: done
+- files: skills/sa-orchestra/{SKILL.md, PLAN-TEMPLATE.md, AUDIT.md, profiles/java-legacy-jsf.md}, agents/{sa-developer.md, sa-tester.md}, EGO_AVATAR.md, AGENTS.md
+- problem: ท่านอยากได้ senior ประกบงาน Java ให้ไม่หลุดกรอบและพิสูจน์ผลได้ — main เป็น SA/Reviewer, sub-agent เป็น Dev/Tester, วนแก้จนผ่าน + โหมดหาช่องโหว่ที่ถามก่อนแก้
+- solution: grill 2 รอบ (13 ข้อ) ต่อยอด mattpocock (implement-spec, code-review 2 แกน, tdd) + karpathy · ตัดส่วนที่ขัดกฎบริษัท (sub-agent commit, worktree) · plan ไฟล์เดียวมีตารางหลักฐานที่ Tester กรอก · วนไม่เกิน 3 รอบ · โปรไฟล์ Java 12 ข้อ (log PII info ได้ตามที่ท่านเคาะ) · AUDIT 11 หัวข้อ + CVE ของ dependency
+- result: งานแก้โค้ด T2+ เรียก sa-orchestra เอง · ตัวแรกที่จะลองคือ audit dmytax-upload แล้วต่อ ICA lookup
+- priority: P1
+- days: 1
+
 ## 2026-10-09 · sync สกิลสาย mattpocock ให้ตรงต้นทางล่าสุด + ตรวจ karpathy
 - module: Skills Registry (mattpocock vendored)
 - status: done

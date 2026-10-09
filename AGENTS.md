@@ -15,6 +15,7 @@
 
 ## Passive Rule: Matt Pocock's Engineering Flow (Micro Cheat Sheet)
 เมื่อต้องทำงานสาย Engineering ให้ยึด Flow พื้นฐานดังนี้เสมอเพื่อ Productivity สูงสุด:
+- **งานแก้โค้ด T2 ขึ้นไป (ค่าเริ่มต้น):** ใช้ `[sa-orchestra]` — MAIN วาง plan + เกณฑ์ผ่าน → ท่านอนุมัติ → `sa-developer` / `sa-tester` ทำทีละ task → MAIN รีวิว 3 แกน · งาน T0–T1 ทำในแชทหลักตาม `[karpathy-discipline]`
 - **Feature ใหม่ (Main Flow):** `Idea` -> `[grill-with-docs]` (สัมภาษณ์ขัดเกลา) -> `[to-spec]` (รวบรวมเป็นสเปค) -> `[to-tickets]` (แตกงาน) -> `[implement]` (ลงมือโค้ดทีละส่วน โดยขับเคลื่อนด้วย `[tdd]` และรีวิวด้วย `[code-review]`)
 - **แก้บั๊กยาก (Bugs):** ห้ามเดาสาเหตุเด็ดขาด! ใช้ `[diagnosing-bugs]` สร้าง Test ให้แดงก่อนแก้เสมอ -> หากเกิดจากโครงสร้างแย่ให้ส่งต่อ `[improve-codebase-architecture]`
 - **Refactoring:** หาเป้าหมายด้วย `[improve-codebase-architecture]` -> เจาะลึกการออกแบบด้วย `[codebase-design]`

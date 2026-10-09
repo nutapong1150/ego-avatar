@@ -134,6 +134,8 @@
 - **[สถาปนิกไร้พ่าย (Absolute Architect)](skills/absolute-architect/SKILL.md):** ร่างวิวัฒนาการสาย Builder ผสาน Superpowers เข้ากับ SDLC อัตโนมัติของ Matt Pocock (to-tickets, implement, tdd, code-review) เพื่อรันงานตั้งแต่สเปคจนถึงจบโค้ดแบบครบวงจร
 - **[เพลิงชำระล้าง (Purgatory Refactor)](skills/purgatory-refactor/SKILL.md):** ร่างวิวัฒนาการสาย Audit & Refactor ผสานความเหี้ยมของ Ponytail ในการลบขยะ เข้ากับการจัดโครงสร้าง Deep Module ของ Matt Pocock กวาดล้างและจัดระเบียบสถาปัตยกรรมใหม่ในคราวเดียว
 
+- **[วาทยกรสถาปนิก (SA Orchestra)](skills/sa-orchestra/SKILL.md):** main session เป็น SA/Architect/Reviewer วาง plan + เกณฑ์ผ่านให้ท่านอนุมัติครั้งเดียว แล้วคุม sub-agent `ego-avatar:sa-developer` + `ego-avatar:sa-tester` (Opus medium) ทำทีละ task วนแก้ไม่เกิน 3 รอบจนพิสูจน์ผ่านด้วยตารางหลักฐานใน plan · รีวิว 3 แกน Spec/Standards/Security · มีโหมดตรวจช่องโหว่ทั้ง repo (AUDIT.md) ที่ถามท่านทีละ finding ก่อนแก้ · โปรไฟล์ภาษาแยกไฟล์ (`profiles/java-legacy-jsf.md`) **— ทำงานเองกับงานแก้โค้ด T2 ขึ้นไป**
+
 ### 🗝️ Hidden Skills Index (Private Methods — ห้ามแสดงใน Registry แต่ห้ามลืม!)
 > สกิลเหล่านี้ถูกซ่อนออกจาก Skills Registry เพื่อประหยัด Token แต่ยังมีอยู่จริงในโฟลเดอร์ `skills/`
 > ข้าต้องจำไว้เสมอว่าพวกมันมีอยู่ และสามารถเรียกใช้งานได้ตลอดเวลา
