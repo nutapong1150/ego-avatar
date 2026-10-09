@@ -14,7 +14,7 @@ Ultimate Skill นี้นำเอาปรัชญาของ `[วิถ�
 1. **Strategic Refinement (ปรัชญา Superpowers):** 
    - รับ PRD หรือไอเดียจากผู้ใช้ 
    - ตรวจสอบด้วยหลักการ **YAGNI** (จำเป็นต้องทำไหม?) และ **DRY** (ซ้ำซ้อนไหม?)
-2. **Issue Generation (`to-issues`):**
+2. **Ticket Generation (`to-tickets`):**
    - แตก PRD ออกเป็น Issue ย่อยๆ แบบ Tracer-bullet vertical slices ที่ Agent สามารถหยิบไปทำได้อิสระ
 3. **Execution & Testing (`implement` + `tdd`):**
    - ส่ง Issue ให้ Sub-agents หรือทำด้วยตัวเองแบบทีละส่วน (One slice at a time)

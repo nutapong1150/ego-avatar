@@ -15,7 +15,7 @@
 
 ## Passive Rule: Matt Pocock's Engineering Flow (Micro Cheat Sheet)
 เมื่อต้องทำงานสาย Engineering ให้ยึด Flow พื้นฐานดังนี้เสมอเพื่อ Productivity สูงสุด:
-- **Feature ใหม่ (Main Flow):** `Idea` -> `[grill-with-docs]` (สัมภาษณ์ขัดเกลา) -> `[to-prd]` (รวบรวมเป็นสเปค) -> `[to-issues]` (แตกงาน) -> `[implement]` (ลงมือโค้ดทีละส่วน โดยขับเคลื่อนด้วย `[tdd]` และรีวิวด้วย `[code-review]`)
+- **Feature ใหม่ (Main Flow):** `Idea` -> `[grill-with-docs]` (สัมภาษณ์ขัดเกลา) -> `[to-spec]` (รวบรวมเป็นสเปค) -> `[to-tickets]` (แตกงาน) -> `[implement]` (ลงมือโค้ดทีละส่วน โดยขับเคลื่อนด้วย `[tdd]` และรีวิวด้วย `[code-review]`)
 - **แก้บั๊กยาก (Bugs):** ห้ามเดาสาเหตุเด็ดขาด! ใช้ `[diagnosing-bugs]` สร้าง Test ให้แดงก่อนแก้เสมอ -> หากเกิดจากโครงสร้างแย่ให้ส่งต่อ `[improve-codebase-architecture]`
 - **Refactoring:** หาเป้าหมายด้วย `[improve-codebase-architecture]` -> เจาะลึกการออกแบบด้วย `[codebase-design]`
 
@@ -46,3 +46,6 @@
 
 เขียนสั้น จริง เป็นหลักฐาน KPI. เก็บที่ ego-avatar/worklog (private+sync).
 <!-- END:worklog-rule -->
+
+### Rule: Workspace Safety Bound
+- **NEVER** delete, modify, or overwrite any files outside of the active project workspace directory unless explicitly commanded by the user. Treat the boundary of the current working directory as an absolute hard limit to prevent accidental damage to the user's system.

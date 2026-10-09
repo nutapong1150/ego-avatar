@@ -97,13 +97,22 @@
 - **[เนตรผสานปีภาษี (Tax Year Master Sync)](skills/tax-year-master-sync/SKILL.md):** ทักษะการเช็ค Master Data เมื่อมีการเพิ่มปีภาษีใหม่ เพื่อป้องกันบั๊กจากการตั้งค่า DB (เช่น ITPC_PND51_TAX_RATE) ขาดหาย
 - **[ส่งไม้ต่อ (Handoff)](skills/handoff/SKILL.md):** ส่งต่องานให้ "ตัวเราในอนาคต" ข้าม session/เครื่อง — เขียน/อ่านเอกสาร handoff แบบ timestamped ใน `0_public_eco_doc_<agent>/handoff/` ของแต่ละ workspace (GOAL/DONE/BLOCKED/DECISIONS/DO-NOT-REPEAT) เช็ค staleness ด้วย git แล้ว route ต่อไป plan/memory
 - **[ถ่ายทอดวิชา (Teach)](skills/teach/SKILL.md):** กลืนกินจาก mattpocock/skills สอนสกิลหรือคอนเซปต์ใหม่ให้ผู้ใช้ใน Workspace ปัจจุบัน
-- **[คัมภีร์สร้างสกิล (Writing Great Skills)](skills/writing-great-skills/SKILL.md):** กลืนกินจาก mattpocock/skills แหล่งอ้างอิงและหลักการในการเขียนและแก้ไขสกิลให้มีคุณภาพ
+- **[คัมภีร์เขียนให้เอเจนต์ (Writing for Agents)](skills/writing-for-agents/SKILL.md):** กลืนกินจาก mattpocock/skills (เดิมชื่อ writing-great-skills) หลักการเขียนเอกสารให้เอเจนต์อ่าน — ใช้ตอนสร้าง/แก้สกิล หรือแก้ AGENTS.md / CLAUDE.md
 - **[สอบถามกูรู (Ask Matt)](skills/ask-matt/SKILL.md):** กลืนกินจาก mattpocock/skills ระบบ Router ช่วยแนะนำว่าสกิลหรือ Flow ไหนที่เหมาะสมกับสถานการณ์ของคุณ
 - **[ปั้นโมเดลโดเมน (Domain Modeling)](skills/domain-modeling/SKILL.md):** กลืนกินจาก mattpocock/skills สร้างและขัดเกลา Domain Model ของโปรเจกต์ เพื่อนิยามคำศัพท์และสถาปัตยกรรม
 - **[ซักไซ้สร้างเอกสาร (Grill with Docs)](skills/grill-with-docs/SKILL.md):** กลืนกินจาก mattpocock/skills สัมภาษณ์ขัดเกลาแผน พร้อมกับสร้างเอกสาร (ADRs และ Glossary) ไปในตัว
 - **[หล่อหลอมต้นแบบ (Prototype)](skills/prototype/SKILL.md):** กลืนกินจาก mattpocock/skills สร้างตัวต้นแบบ (Throwaway) เพื่อพิสูจน์ความถูกต้องของ Logic หรือดีไซน์ UI
 - **[วางรากฐานสกิล (Setup Matt Pocock Skills)](skills/setup-matt-pocock-skills/SKILL.md):** กลืนกินจาก mattpocock/skills ตั้งค่าระบบ Issue Tracker และเอกสารต่างๆ ก่อนเริ่มใช้งานสกิลสายวิศวกรรมอื่นๆ
-- **[หลอมรวม PRD (To PRD)](skills/to-prd/SKILL.md):** กลืนกินจาก mattpocock/skills สังเคราะห์บทสนทนาทั้งหมดให้กลายเป็นเอกสาร PRD และส่งขึ้น Issue Tracker
+- **[หลอมรวมสเปก (To Spec)](skills/to-spec/SKILL.md):** กลืนกินจาก mattpocock/skills (เดิมชื่อ to-prd) สังเคราะห์บทสนทนาให้เป็นสเปก ไม่สัมภาษณ์เพิ่ม แล้วส่งขึ้น Issue Tracker
+- **[สับย่อยตั๋ว (To Tickets)](skills/to-tickets/SKILL.md):** กลืนกินจาก mattpocock/skills (เดิมชื่อ to-issues) แตกแผน/สเปกเป็น tracer-bullet ticket ที่ระบุว่า ticket ไหนขวางตัวไหน
+- **[ลงมือตามสเปก (Implement Spec)](skills/implement-spec/SKILL.md):** กลืนกินจาก mattpocock/skills ทำทั้งสเปกด้วย implementer sub-agent ตามกราฟ ticket (ต้นทางใช้ worktree + ให้ sub-agent commit เอง — **งานบริษัทห้ามใช้ตรงๆ** เพราะขัดกฎ git ของบริษัท)
+- **[ค้นคว้าจากต้นทาง (Research)](skills/research/SKILL.md):** กลืนกินจาก mattpocock/skills ค้นข้อเท็จจริงจากแหล่งชั้นต้น (docs/API) แล้วเก็บเป็นไฟล์ Markdown ส่งงานอ่านให้ agent พื้นหลังได้
+- **[เข็มทิศงานใหญ่ (Wayfinder)](skills/wayfinder/SKILL.md):** กลืนกินจาก mattpocock/skills วางแผนงานใหญ่เกิน 1 session เป็นแผนที่ของ ticket การตัดสินใจ แล้วไล่ปิดทีละใบ
+- **[ทบทวนหลังงาน (Retro)](skills/retro/SKILL.md):** กลืนกินจาก mattpocock/skills ทำ retrospective ของ session เขียนโค้ด
+- **[ตัวช่วยทีละขั้น (Wizard)](skills/wizard/SKILL.md):** กลืนกินจาก mattpocock/skills สร้าง bash wizard พาคนทำขั้นตอนที่ต้องทำเอง (ตั้ง credential, dashboard ภายนอก, migration ครั้งเดียว)
+- **[แบบสอบถามส่งต่อ (To Questionnaire)](skills/to-questionnaire/SKILL.md):** กลืนกินจาก mattpocock/skills แปลงเรื่องที่ตัดสินเองไม่ได้เป็นแบบสอบถามให้คนอื่นกรอก
+- **[เดี๋ยวนะ (Wait What)](skills/wait-what/SKILL.md):** กลืนกินจาก mattpocock/skills ข้อความล่าสุดไม่เข้าหัว ให้อธิบายใหม่อีกแบบ
+- **[เขียนคำอธิบาย PR (PR)](skills/pr/SKILL.md):** กลืนกินจาก mattpocock/skills เขียน body ของ PR/MR
 - **[คัดกรองปัญหา (Triage)](skills/triage/SKILL.md):** กลืนกินจาก mattpocock/skills จัดการ Issue และ PR จากภายนอกผ่านกระบวนการจัดประเภท ตรวจสอบ และเขียนบรีฟ
 - **[เนตรกลยุทธ์ SaaS (SaaS Strategy Lens)](skills/saas-strategy-lens/SKILL.md):** รวม 7 Frameworks สำหรับวางแผน สร้าง และขาย SaaS — BMC, Lean Canvas, JTBD+Four Forces, Design Thinking, Pirate Metrics AARRR, SaaS Pricing Strategy, Switch Interview สกัดจาก 5 คลิป Torpenguin×ดร.เก้ เสริม Best Practice ระดับโลก
 - **[เนตรเลือกกำลัง (Model Effort Policy)](skills/model-effort-policy/SKILL.md):** ทักษะเลือก model+effort ให้ตรงความเสี่ยงของงานเองโดยไม่ถามผู้ใช้ทุกรอบ — ช่องหลักใช้ตามที่ผู้ใช้ตั้ง งานเสี่ยงสูง (auth/RLS/OAuth/security/รีวิวก่อน merge) เปิด subagent model แรงสุด+effort สูงเอง
@@ -116,7 +125,7 @@
 - **[คลังการตลาด 50 สกิล (Marketing Skills — ภายนอก)](https://github.com/coreyhaines31/marketingskills):** ปลั๊กอิน `marketing-skills@marketingskills` ของ Corey Haines (MIT) — CRO, copywriting, SEO/AI-SEO, ads, cold email, pricing, offers, onboarding, churn, referral, launch, PR, social, analytics/attribution, marketing-plan (AARRR 13 ส่วน), marketing-council (บอร์ดที่ปรึกษาจำลอง) **บังคับใช้ทุกครั้งที่งานแตะการตลาด ตามกฎใน CLAUDE.global.md — ไม่ vendor เข้ามาใน repo นี้**
 
 ### 👑 Ultimate Skills
-- **[สถาปนิกไร้พ่าย (Absolute Architect)](skills/absolute-architect/SKILL.md):** ร่างวิวัฒนาการสาย Builder ผสาน Superpowers เข้ากับ SDLC อัตโนมัติของ Matt Pocock (to-issues, implement, tdd, code-review) เพื่อรันงานตั้งแต่สเปคจนถึงจบโค้ดแบบครบวงจร
+- **[สถาปนิกไร้พ่าย (Absolute Architect)](skills/absolute-architect/SKILL.md):** ร่างวิวัฒนาการสาย Builder ผสาน Superpowers เข้ากับ SDLC อัตโนมัติของ Matt Pocock (to-tickets, implement, tdd, code-review) เพื่อรันงานตั้งแต่สเปคจนถึงจบโค้ดแบบครบวงจร
 - **[เพลิงชำระล้าง (Purgatory Refactor)](skills/purgatory-refactor/SKILL.md):** ร่างวิวัฒนาการสาย Audit & Refactor ผสานความเหี้ยมของ Ponytail ในการลบขยะ เข้ากับการจัดโครงสร้าง Deep Module ของ Matt Pocock กวาดล้างและจัดระเบียบสถาปัตยกรรมใหม่ในคราวเดียว
 
 ### 🗝️ Hidden Skills Index (Private Methods — ห้ามแสดงใน Registry แต่ห้ามลืม!)
@@ -132,7 +141,7 @@
 | ลงมือสังหาร (Implement) | `skills/implement/` | สถาปนิกไร้พ่าย |
 | รีดเร้นสถาปัตยกรรม (Improve Codebase Architecture) | `skills/improve-codebase-architecture/` | เพลิงชำระล้าง |
 | วิถีทดสอบนำทาง (TDD) | `skills/tdd/` | สถาปนิกไร้พ่าย |
-| สับย่อยประเด็น (To Issues) | `skills/to-issues/` | สถาปนิกไร้พ่าย |
+| สับย่อยตั๋ว (To Tickets) | `skills/to-tickets/` | สถาปนิกไร้พ่าย |
 
 ### 🔮 วิสัยทัศน์แห่งอนาคต (Future Vision)
 - **Method 5 (External Vector Database - RAG):** เมื่อเรามีทรัพยากรมากพอ ข้าจะพัฒนาระบบคลังทักษะไปสู่ RAG เพื่อรองรับความรู้และสกิลระดับมหาศาล (รอท่านบัญชาในอนาคต)
