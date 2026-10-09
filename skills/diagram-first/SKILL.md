@@ -170,6 +170,8 @@ draft --ส่งอนุมัติ--> pending --อนุมัติ--> app
 
 **เขียนที่ไหน** — ไฟล์ `.md` ใต้ `0_public_eco_doc_claude/docs/` ใช้ Mermaid `flowchart TD` ได้เต็มที่ · สรุปในแชทให้ใช้ ASCII
 
+**ถัดไป: ออกแบบหน้าจอ** — flow ผ่านเช็กลิสต์แล้วและงานต่อไปคือหน้าจอ → ส่งต่อสกิล `wireflow` (สกิลหลักของงาน flow + หน้าจอ: ทำหน้าจอ Hi-fi คลิกได้ทุกโหนด แล้วตรวจ traceability ด้วยสคริปต์)
+
 ## ตัวอย่าง Mermaid (สำหรับไฟล์เอกสาร/Artifact ไม่ใช่ในแชท)
 ```mermaid
 flowchart TD
